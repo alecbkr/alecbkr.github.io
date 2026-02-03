@@ -3,6 +3,7 @@ html,body{
     height: 100%;
     background-color:rgb(180, 227, 228);
     font-size: 12.2px;
+    margin-left: 3px;
 }
 
 h1{
@@ -52,7 +53,7 @@ ol li:before{
     border: 5px 20px 5px;
     border-color: green;
 
-    margin-left: 15px;
+    margin-left: 10px;
     margin-right: 550px;
 }
 
@@ -61,8 +62,6 @@ ol li:before{
     background-color: rgb(1, 1, 155);
 
     padding: 10px 15px 10px 15px;
-
-    margin-left: 5px;
     margin-right: 5px;
 }
 
