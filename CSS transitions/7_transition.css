@@ -27,9 +27,6 @@ header{
     overflow: hidden;
     display: none;
 }
-#recentArticles:hover + #jumpMenu, #jumpMenu:hover {
-  display: block;
-}
 
 #recentArticles:hover + #jumpMenu, #jumpMenu:hover{
     display: block;
