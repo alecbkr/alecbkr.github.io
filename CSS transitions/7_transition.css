@@ -27,12 +27,20 @@ header{
     overflow: hidden;
     display: none;
 }
+#recentArticles:hover + #jumpMenu, #jumpMenu:hover {
+  display: block;
+}
 
-#recentArticles:hover + #jumpMenu{
+#recentArticles:hover + #jumpMenu, #jumpMenu:hover{
     display: block;
     overflow: visible;
     height: auto;
     width: auto;
+}   
+
+li a:hover{
+    color: black;
+    background-color: blue;
 }
 
 
