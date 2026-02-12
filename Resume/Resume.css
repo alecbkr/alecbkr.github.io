@@ -1,0 +1,76 @@
+html{
+    background-color: rgb(16, 25, 41);
+}  
+body{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+header{
+    background-color: rgb(16, 25, 41);
+    /* margin: 15%; */
+    max-width: 800px;
+    width: 100%;
+    position: fixed;
+    padding-bottom: 5px;
+}
+h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    margin:0;
+}
+.name{
+    color:rgb(235, 235, 254);
+    font-size: 36px;
+    font-style: bold;
+    padding: 20px 10px 0px 20px;
+}
+.contactinfo{
+    color:white;
+    font-size:20px;
+    font-style: bold;
+    
+    background-color: rgb(135, 164, 217);
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    gap: clamp(0rem, 2vw, 2rem);
+}
+
+
+.page{
+    background-color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 90px 20px 20px 20px;
+}
+summary{
+    list-style: none;
+}
+.projectlist{
+    width: 8rem;
+}
+.projectitem{
+    background-color: rgb(214, 15, 15);
+
+}
+.projectdetails{
+    background-color: blue;
+
+    max-width: 612px;
+    width: 100%;
+    position: absolute;
+    top: 318px; left: 388px;
+    padding-left: 20px;
+    
+
+}
+
+
+
+
+
+
+

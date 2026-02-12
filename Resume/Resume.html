@@ -3,44 +3,80 @@
 <html lang="en">
     <head>
         <title>Resume</title>
+        <link rel="stylesheet" href="Resume.css">
+        <link rel="icon" href="chesticon2.png">
     </head>
 
+    
+
     <body>
-        <section>
-            <h1> Alec Baker | al057414@ucf.edu | linkedin.com/in/alecbkr</h1>
-            <p>
-                Up and coming software engineer. Detail oriented and creatively passionate, 
-                can't wait to get into the field and learn first hand.
-            </p>
+        <header>
+            <h1 class="name"> Alec Baker</h1>
+            <section class="contactinfo">
+                <a href="mailto:al057414@ucf.edu">al057414@ucf.edu</a>
+                <a href="https://www.linkedin.com/in/alecbkr/" target="_blank">LinkedIn</a>
+                <a href="https://ucf.joinhandshake.com/profiles/alecbkr" target="_blank">Handshake</a>
+                <a href="https://github.com/alecbkr">GitHub</a>
+            </section>
             
-        </section>
+        </header>
 
-        <section>
-            <h2>Education:</h2>
-            <ul>
-                <li>B.S. Computer Science - Univeristy Central Florida</li>
-                <li>High School Diploma - Hagerty Highschool</li>
-            </ul>
-        </section>
+        <main class="page">
+            <section>
+                <p>
+                    Up and coming software engineer. Detail oriented and creatively passionate, 
+                    can't wait to get into the field and learn first hand.
+                </p>
+                
+            </section>
 
-        <section>
-            <h2>Projects:</h2>
-            <ul>
-                <li>Shader Sandbox</li>
-                <li><a href="Chess/SimpletonChess.html" target="_self">Simpleton Chess</a></li>
-                <li><a href="Shuzzy/Shuzzy.html" target="_self">Shuzzy+</a></li>
-            </ul>
-        </section>
+            <section>
+                <h2>Education</h2>
+                <ul class="educationlist">
+                    <li>B.S. Computer Science - Univeristy Central Florida</li>
+                    <li>High School Diploma - Hagerty Highschool</li>
+                </ul>
+            </section>
 
-        <section>
-            <h2>Skills:</h2>
-            <ul>
-                <li>C/C++</li>
-                <li>Object Oriented Programming</li>
-                <li>Git</li>
-                <li>Scrum</li>
-                <li>Microsoft Office</li>
-            </ul>
-        </section>
+            <section>
+                <h2>Projects</h2>
+                <div class="projectlist">
+                    <details name="projectitem" class="projectitem">
+                        <summary>Shader Sandbox</summary>
+                        <div class="projectdetails">
+                            hello
+                        </div>
+                    </details>
+
+                    <details name="projectitem" class="projectitem">
+                        <summary>Simpleton Chess</summary>
+                        <div class="projectdetails">
+                            <img src="Chess/simpletonchess1.png">
+                            <img src="Chess/simpletonchess2.png">
+                            <img src="Chess/simpletonchess3.png">
+                        </div>
+                    </details>
+
+                    <details name="projectitem" class="projectitem">
+                        <summary>Shuzzy</summary>
+                        <div class="projectdetails">
+                            hello
+                        </div>
+                    </details> 
+
+                </div>
+            </section>
+
+            <section>
+                <h2>Skills</h2>
+                <ul>
+                    <li>C/C++</li>
+                    <li>Object Oriented Programming</li>
+                    <li>Git</li>
+                    <li>Scrum</li>
+                    <li>Microsoft Office</li>
+                </ul>
+            </section>
+        </main>
     </body>
 </html>
