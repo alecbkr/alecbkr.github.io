@@ -60,7 +60,6 @@ details:hover{
     background-color: rgb(135, 164, 217);
 }
 .projectlist{
-    background-color: yellow;
     max-width: 816px;
     position:relative;
 }
@@ -68,10 +67,11 @@ details:hover{
     /* background-color: rgb(214, 15, 15); */
     width: 15%;
     font-style: bold;
+    
 
 }
 .projectdetails{
-    background-color: blue;
+    background-color: rgb(135, 164, 217);
 
     /* max-width: 628px; */
     width: 80%;
