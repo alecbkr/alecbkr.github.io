@@ -9,30 +9,28 @@ body{
 
 header{
     background-color: rgb(16, 25, 41);
-    /* margin: 15%; */
     max-width: 800px;
     width: 100%;
     position: fixed;
-    padding-bottom: 5px;
-}
-h1{
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 40px;
-    margin:0;
+    top: 0px;
 }
 .name{
     color:rgb(235, 235, 254);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
     font-size: 36px;
     font-style: bold;
+
     padding: 20px 10px 0px 20px;
+    margin:0;
 }
 .contactinfo{
     color:white;
     font-size:20px;
     font-style: bold;
+    text-align: center;
     
     background-color: rgb(135, 164, 217);
-    text-align: center;
 
     display: flex;
     justify-content: center;
@@ -43,8 +41,8 @@ h1{
 .page{
     background-color: white;
     max-width: 800px;
-    margin: 0 auto;
-    padding: 90px 20px 20px 20px;
+    margin-top: 90px;
+    padding: 1px 20px 20px 20px;
 }
 summary{
     list-style: none;
