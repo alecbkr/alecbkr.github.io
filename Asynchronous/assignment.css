@@ -1,0 +1,58 @@
+html {
+    background-color: rgb(8, 117, 8);
+}   
+
+form {
+    width: 300px;
+    margin: 10vh auto;
+    background-color: rgb(109, 220, 109);
+}
+
+#sprite {
+    background-color: white;
+    width: 200px;   
+    margin-left: 50;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#move_container {
+    width: 300px;
+}
+
+select {
+    width: 145px;
+    margin-left: 2px;
+}
+
+#addButton {
+    width: 300px;
+    margin-top: 5px;    
+}
+
+#team_list {
+    width: 100%;
+    background-color: rgb(109, 220, 109);
+    display: flex;
+}
+
+#team_entry {
+    background-color: yellowgreen;
+    width: 10vw;    
+    height: 180 px;
+    min-width: 100px;
+    
+    margin-left: 10px;
+    margin-right: 10px;
+    
+    border: 2px solid;
+    border-color: rgb(43, 69, 32);
+    border-radius: 4px;
+}
+
+#team_entry img{
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 15;
+    background-color: white;
+}
