@@ -1,0 +1,22 @@
+{
+    "greeting": [
+        "Welcome!",
+        "Hello!",
+        "How's it goin?",
+        "Oh, a visitor.",
+        "Come here often? Maybe you should!"
+    ],
+    
+
+    "chatter": [
+        "Go easy!",
+        "Working very hard over here.",
+        "Was hoping you'd bring snacks...",
+        "I could use a nap.",
+        "Maybe theres more to it than we thought?",
+        "Racking my brain for new quips...",
+        "I've always been bad at small talk.",
+        "Wanna hear a joke? Wait, I forgot.",
+        "It ain't much, but it's home."
+    ]
+}

@@ -1,0 +1,217 @@
+html {
+    background-color: rgb(20, 20, 20)
+}
+
+h1 {
+    color: whitesmoke;
+    margin-bottom: 0;
+}
+
+.textbox {
+    background-color: white;
+    white-space: nowrap;
+    padding: 5px 5px 5px 5px;
+    border-radius: 2px;
+    opacity: 0;
+
+    display: flex;
+    position:absolute;
+    right: 100%;
+    transform-origin: right center;
+    transform: translate(10px, -165px) ;
+
+    
+}
+
+.titleCard {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: fit-content;
+    margin: 0 auto;
+    /* justify-content: center; */
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+}
+
+.titleText {
+    font-size: 50px;
+    font-family: system-ui, sans-serif;
+    font-weight: 700;
+    /* font-family: 'Space Grotesk', sans-serif; */
+}
+
+.titleLinks {
+    display: flex;
+    padding: 0 15px 0 15px;
+    border-radius: 20px;
+    border: 2px solid rgb(74, 74, 74);
+    gap: .20cm;
+    background-color: rgb(36, 36, 36);
+    align-items: bottom;
+}
+
+#githubIcon {
+    --baseColor: rgb(188, 99, 230);
+}
+
+
+#linkedinIcon {
+    --baseColor: rgb(96, 82, 253);
+}
+
+.linkIcon {
+    /* background-color: rgb(150, 150, 150); */
+    background-color: var(--baseColor);
+    height: 25px;
+    width: 25px;
+
+    border-radius: 5px;
+    padding:1px 15px 1px 15px;
+    transition: background-color 0.2s ease;
+    
+}
+
+.linkIcon:hover {
+    /* background-color: var(--litColor); */
+    background-color: rgb(255, 40, 40);
+}
+
+#introduction {
+    background-color: rgb(43, 5, 5);
+    color: whitesmoke;
+    font-size: 18px;
+    font-family: "IBM Plex Sans", sans-serif;
+
+    margin-left: 15vw;
+    margin-right: 15vw;
+    padding: 10px 10px 10px 10px;
+    border: 1px solid black;
+    
+}
+
+.linkContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10vw;
+}
+
+.spriteLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: .2cm;
+}
+
+
+
+.animatedSprite {
+    display: block;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    filter: none !important;
+
+    transform-origin:top left;
+
+    background-position: 0 0;
+}
+
+
+.linkTitle {
+    color: whitesmoke;
+    font-family: system-ui, sans-serif;
+    font-weight: 600;
+
+    background-color: rgb(43, 5, 5);
+    padding: 3px;
+    border: 1px solid black;
+
+    text-align: center;
+    margin: 0;
+
+}
+
+
+.animating {
+    animation: playSprite var(--frameInterval) steps(var(--numFrames)) var(--loop);
+}
+
+@keyframes playSprite {
+    from { background-position: 0 0; }
+    to { background-position: var(--lastFrameX) 0; }
+}
+
+
+
+
+
+
+#chest {
+    background-image: url("assets/sprites/chest_spritesheet.png");
+    width: 180px;
+    height: 140px;
+    transform: scale(.50);
+    
+    --lastFrameX: -900px;
+    --frameInterval: .30s;
+    --numFrames: 5;
+    --loop: forwards;
+}
+
+#spriteAnchor_chest {
+    width: 90px;
+    height: 70px;
+}
+
+
+#email {
+    background-image: url("assets/sprites/email_spritesheet.png");
+    width: 200px;
+    height: 200px;
+    transform: scale(.35);
+
+    --lastFrameX: -2400px;
+    --frameInterval: .70s;
+    --numFrames: 12;
+    --loop: infinite;
+}
+
+#spriteAnchor_email {
+    width: 70px;
+    height: 70px;
+    /* background-color: orange; */
+}
+
+
+#bat {
+    background-image: url("assets/sprites/bat_spritesheet.png");
+    width: 170px;
+    height: 120px;
+    transform: scale(.40);
+    
+    cursor: pointer;
+
+    --lastFrameX: -510px;
+    --frameInterval: .45s;
+    --numFrames: 3;
+    --loop: infinite;
+}
+
+#spriteAnchor_bat {
+    width: 68px;
+    height: 48px;
+    margin-top: 25px;
+
+    position: relative;
+    /* background-color: orange; */
+}
