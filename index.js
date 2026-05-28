@@ -23,12 +23,24 @@ hoverableAnchors.forEach((anchor) => {
     anchor.addEventListener("mouseenter", () => {
 
         const sprite = anchor.querySelector(".animatedSprite");
+        
+        const translationX = parseFloat(getComputedStyle(sprite).getPropertyValue("--translationX"));
+        const translationY = parseFloat(getComputedStyle(sprite).getPropertyValue("--translationY"));
+        const hoverScale = parseFloat(getComputedStyle(sprite).getPropertyValue("--hoverScale"));
+        sprite.style.transform = `translate(${translationX}px, ${translationY}px) scale(${hoverScale})`;
         sprite.classList.add("animating");
     });
 
     anchor.addEventListener("mouseleave", () => {
         const sprite = anchor.querySelector(".animatedSprite");
+
+        const translationX = parseFloat(getComputedStyle(sprite).getPropertyValue("--translationX"));
+        const translationY = parseFloat(getComputedStyle(sprite).getPropertyValue("--translationY"));
+        const baseScale = parseFloat(getComputedStyle(sprite).getPropertyValue("--baseScale"));
+        sprite.style.transform = `translate(${translationX}px, ${translationY}px) scale(${baseScale})`;
         sprite.classList.remove("animating");
+
+        
     });
 });
 
@@ -36,11 +48,11 @@ hoverableAnchors.forEach((anchor) => {
 clickableAnchors.forEach((anchor) => {
     anchor.addEventListener("pointerdown", () => {
         anchor.setPointerCapture(event.pointerId);
+
         const sprite = anchor.querySelector(".animatedSprite");
         const translationX = parseFloat(getComputedStyle(sprite).getPropertyValue("--translationX"));
         const translationY = parseFloat(getComputedStyle(sprite).getPropertyValue("--translationY"));
         const clickScale = parseFloat(getComputedStyle(sprite).getPropertyValue("--clickScale"));
-
         sprite.style.transform = `translate(${translationX}px, ${translationY}px) scale(${clickScale})`;
     });
 
@@ -51,15 +63,11 @@ clickableAnchors.forEach((anchor) => {
             action();
         }
 
-
         const sprite = anchor.querySelector(".animatedSprite");
         const translationX = parseFloat(getComputedStyle(sprite).getPropertyValue("--translationX"));
         const translationY = parseFloat(getComputedStyle(sprite).getPropertyValue("--translationY"));
         const baseScale = parseFloat(getComputedStyle(sprite).getPropertyValue("--baseScale"));
-
         sprite.style.transform = `translate(${translationX}px, ${translationY}px) scale(${baseScale})`;
-
-        
     })
 })
 
@@ -81,7 +89,7 @@ function greet() {
         speaking = true;
         const greetings = dialogue.greeting;
         const choice = greetings[Math.floor(Math.random() * greetings.length)];
-        updateTextbox(choice, 2000);
+        updateTextbox(choice, 4000);
     }
 }
 
