@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="index.css">
         <script src="index.js" defer></script>
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
@@ -20,8 +20,8 @@
         <div class="titleCard">
             <div class="title">
                 <h1 class="titleText">Alec Baker</h1>
-                <div id="spriteAnchor_bat">
-                    <div class="animatedSprite animating interactive" id="bat"></div>
+                <div class="clickable" id="spriteAnchor_bat" data-action="speak">
+                    <div class="animatedSprite animating" id="bat" ></div>
                     <p class="textbox">Welcome</p>
                     
                 </div>
@@ -30,11 +30,11 @@
 
             <div class="titleLinks">
 
-                <a href="https://github.com/alecbkr" target="_blank">
+                <a href="https://github.com/alecbkr" target="_blank" class="iconAnchor" id="githubIcon">
                     <img src="assets/icons/github.png" alt="Github" class="linkIcon" id="githubIcon">
                 </a>
 
-                <a href="https://www.linkedin.com/in/alecbkr" target="_blank">
+                <a href="https://www.linkedin.com/in/alecbkr" target="_blank" class="iconAnchor" id="linkedinIcon">
                     <img src="assets/icons/linkedin.png" alt="LinkedIn" class="linkIcon" id="linkedinIcon">
                 </a>
                 
@@ -59,16 +59,16 @@
         <div class="linkContainer">
 
             <div class="spriteLink">
-                <a href="Projects/index.html" id="spriteAnchor_chest">
-                    <div class="animatedSprite hover" id="chest"></div>
-                </a>
+                <div class="clickable hoverable" id="spriteAnchor_chest">
+                    <div class="animatedSprite" id="chest"></div>
+                </div>
                 <p class="linkTitle"> Projects </p>
             </div>
 
             <div class="spriteLink">
-                <a href="Projects/index.html" id="spriteAnchor_email">
-                    <div class="animatedSprite hover" id="email"></div>
-                </a>
+                <div class="clickable hoverable" id="spriteAnchor_email">
+                    <div class="animatedSprite" id="email"></div>
+                </div>
                 <p class="linkTitle"> Contact </p>
             </div>
 
