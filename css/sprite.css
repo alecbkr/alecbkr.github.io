@@ -1,0 +1,157 @@
+.spriteLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: .2cm;
+}
+
+
+
+.animatedSprite {
+    display: block;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    filter: none !important;
+
+    transform-origin:center center;
+
+    /* background-position: 0 0; */
+    /* background-color: orange; */
+}
+
+
+.linkTitle {
+    color: whitesmoke;
+    font-family: system-ui, sans-serif;
+    font-weight: 600;
+
+    background-color: rgb(43, 5, 5);
+    padding: 3px;
+    border: 1px solid black;
+
+    text-align: center;
+    margin: 0;
+
+}
+
+
+.animating {
+    animation: playSprite var(--frameInterval) steps(var(--numFrames)) var(--loop);
+}
+
+@keyframes playSprite {
+    from { background-position: 0 0; }
+    to { background-position: var(--lastFrameX) 0; }
+}
+
+
+#spriteAnchor_profile {
+    display: inline-block;
+    width: 70px;
+    height: 70px; 
+    /* /* position: relative; */
+    /* background-color: green; */
+}
+
+
+#profile {
+    background-image: url("../assets/sprites/profile_spritesheet.png");
+    width: 200px;
+    height: 200px;
+    
+    --translationX: -65px;
+    --translationY: -65px;
+    --baseScale: .35;
+    --clickScale: .25;
+    --hoverScale: .45;
+    transform: translate(var(--translationX), var(--translationY)) scale(var(--baseScale));
+
+    --lastFrameX: -600px;
+    --frameInterval: .90s;
+    --numFrames: 3;
+    --loop: infinite;
+}
+
+
+#chest {
+    background-image: url("../assets/sprites/chest_spritesheet.png");
+    width: 180px;
+    height: 140px;
+
+    --translationX: -45px;
+    --translationY: -35px;
+    --baseScale: .50;
+    --clickScale: .40;
+    --hoverScale: .58;
+    transform: translate(var(--translationX), var(--translationY)) scale(var(--baseScale));
+    
+    --lastFrameX: -900px;
+    --frameInterval: .30s;
+    --numFrames: 5;
+    --loop: forwards;
+}
+
+#spriteAnchor_chest {
+    display: inline-block;
+    width: 90px;
+    height: 70px;
+    /* background-color: green; */
+}
+
+
+#email {
+    background-image: url("../assets/sprites/email_spritesheet.png");
+    width: 200px;
+    height: 200px;
+    
+    --translationX: -65px;
+    --translationY: -65px;
+    --baseScale: .35;
+    --clickScale: .25;
+    --hoverScale: .45;
+    transform: translate(var(--translationX), var(--translationY)) scale(var(--baseScale));
+
+    --lastFrameX: -2400px;
+    --frameInterval: .70s;
+    --numFrames: 12;
+    --loop: infinite;
+}
+
+#spriteAnchor_email {
+    display: inline-block;
+    width: 70px;
+    height: 70px; 
+    /* /* position: relative; */
+    /* background-color: green; */
+}
+
+
+#bat {
+    background-image: url("../assets/sprites/bat_spritesheet.png");
+    width: 170px;
+    height: 120px;
+    cursor: pointer;
+
+    --translationX: -51px;
+    --translationY: -36px;
+    --baseScale: .40;
+    --clickScale: .35;
+    transform: translate(var(--translationX), var(--translationY)) scale(var(--baseScale));
+    
+    --lastFrameX: -510px;
+    --frameInterval: .40s;
+    --numFrames: 3;
+    --loop: infinite;
+}
+
+#spriteAnchor_bat {
+    display: inline-block;
+    width: 68px;
+    height: 48px;
+
+    position: absolute;
+    transform: translate(190px, 20px);
+    /* background-color: orange; */
+}

@@ -1,0 +1,100 @@
+#contentContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* margin-left: 15vw;
+    margin-right: 15vw; */
+    margin: 70px 15vw 30px 15vw;
+    /* gap: 100px; */
+    padding: 10px 10px 10px 10px;
+}
+
+#contentTitle {
+    background-color: var(--ambientSecondary);
+
+    position: absolute;
+    top: -25px;
+    width: fit-content;
+    padding: 0 5px 2px 5px;
+    transform: translate(-12px, -8px);
+
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
+#profileDescription {
+    font-size: 18px;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+#profileVisuals {
+    display: flex;
+    width: fit-content;
+    float: right;
+    gap: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+#profilePic {
+    --size: 150px;
+    border-radius: 4px;
+    width: var(--size); height: var(--size);
+}
+
+
+#skills {
+    display: flex;
+    flex-direction: column;
+}
+
+.profileSkill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+
+    border-top: solid 2px var(--ambientSecondary);
+    font-family: system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    
+}
+
+.skillBar {
+    display: flex;
+    width: 80px; height: 10px;
+    margin-left: auto;
+
+}
+
+.skillBar .segment {
+    /* background-color: rgb(116, 116, 116); */
+    background-color: var(--ambientPrimary);
+    width: 10%;
+    height: 100%;
+    border: 1px solid var(--backgroundSecondary);
+}
+
+.skillBar .segment.filled {
+    background-color: var(--lightPrimary);
+}
+
+
+.linkContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10vw;
+    /* margin: 0; */
+}

@@ -4,26 +4,27 @@
     <head>
         <title>Alec Baker</title>
         <link rel="icon" href="sprites/icon.png">
-        <link rel="stylesheet" href="index.css">
-        <script src="index.js" defer></script>
+        <link rel="stylesheet" href="css/styling.css">
+        <link rel="stylesheet" href="css/sprite.css">
+        <link rel="stylesheet" href="css/title.css">
+        <link rel="stylesheet" href="css/content.css">
+        
+        <script type="module" src="js/main.js" defer></script>
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
 
-        <div class="titleCard">
-            <div class="title">
-                <h1 class="titleText">ALEC BAKER</h1>
-                <div class="clickable" id="spriteAnchor_bat" data-action="speak">
-                    <div class="animatedSprite animating" id="bat" ></div>
-                    <p class="textbox">Welcome!</p>
-                    
-                </div>
+        <section id="titleContainer" class="container">
 
+            <h1 class="titleText">ALEC BAKER</h1>
+            <div id="spriteAnchor_bat" class="clickable" data-action="speak">
+                <div id="bat" class="animatedSprite animating"  ></div>
+                <p class="textbox">Welcome!</p>
             </div>
 
-            <div class="socialsContainer">
+            <section id="socialsContainer" class="container">
 
                 <a href="https://github.com/alecbkr" target="_blank" class="socialItem" id="githubIcon">
                     <img src="assets/icons/github.png" class="linkIcon" id="githubIcon">
@@ -35,46 +36,87 @@
                     <p>LINKEDIN</p>
                 </a>
                 
+            </section>
 
-            </div>
+        </section>
 
-        </div>
+        <section id="contentContainer" class="container">
+            <h2 id="contentTitle" class="container">ALECBKR\PROFILE</h2>
 
-        <div class="contentContainer">
-            <h2 class="contentTitle">PROFILE</h2>
-            <p class="contentBody" id="contentType-text">
-                My name's Alec, I'm a recent <a href="https://www.ucf.edu/">UCF</a> graduate with a shiny new bachelor's in Computer Science. 
-                I'm an ambitious software engineer looking for professional opportunities to strengthen my talent.
-                Problem solving and creativity are my biggest strengths, and let me excel when developing software.
-                Currently I have a couple projects under my belt that I am very proud of. 
-                Throughout their development, I have learned much about planning, dilligence, teamwork and the importance of employing creative solutions.
-                You can read about and view them below.
-                I look forward to participating in many more projects in the future.
-            </p>
-        </div>
+            <section id="profileContent" class="content active" data-title="ALECBKR\PROFILE">
+                <div id="profileVisuals">
+
+                    <img id="profilePic" class="container" src="assets/pfp.jpg" alt="pfp">
+                    
+                    <section id="skills">
+
+                        <div class="profileSkill">
+                            <span class="profileSkillName">C</span>
+                            <div class="skillBar" style="--level: 8"> </div>
+                        </div>
+
+                        <div class="profileSkill">
+                            <span class="profileSkillName">C++</span>
+                            <div class="skillBar" style="--level: 9"> </div>
+                        </div>
+
+                        <div class="profileSkill">
+                            <span class="profileSkillName">JAVA</span>
+                            <div class="skillBar" style="--level: 6"> </div>
+                        </div>
+
+                        <div class="profileSkill">
+                            <span class="profileSkillName">PYTHON</span>
+                            <div class="skillBar" style="--level: 7"> </div>
+                        </div>
+                    </section>
+                    
+
+
+                </div>
+                
+                <p  id="profileDescription">
+                    My name's Alec, I'm a recent <a href="https://www.ucf.edu/">UCF</a> graduate with a shiny new bachelor's in Computer Science. 
+                    I'm an ambitious software engineer looking for professional opportunities to strengthen my talent.
+                    Problem solving and creativity are my biggest strengths, and let me excel when developing software.
+                    Currently I have a couple projects under my belt that I am very proud of. 
+                    Throughout their development, I have learned much about planning, dilligence, teamwork and the importance of employing creative solutions.
+                    You can read about and view them below.
+                    I look forward to participating in many more projects in the future.
+                </p>
+            </section>
+
+            <section id="projectContent" class="content" data-title="ALECBKR\PROJECTS">
+                
+            </section>
+
+            <section id="contactContent" class="content" data-title="ALECBKR\CONTACT">
+
+            </section>
+        </section>
 
         <div class="linkContainer">
 
-            <div class="spriteLink">
-                <div class="clickable hoverable" id="spriteAnchor_profile">
+            <section class="spriteLink">
+                <div class="clickable hoverable" id="spriteAnchor_profile" data-action="openContent">
                     <div class="animatedSprite" id="profile"></div>
                 </div>
                 <p class="linkTitle"> PROFILE </p>
-            </div>
+            </section>
 
-            <div class="spriteLink">
-                <div class="clickable hoverable" id="spriteAnchor_chest">
+            <section class="spriteLink">
+                <div class="clickable hoverable" id="spriteAnchor_chest" data-action="openContent">
                     <div class="animatedSprite" id="chest"></div>
                 </div>
                 <p class="linkTitle"> PROJECTS </p>
-            </div>
+            </section>
 
-            <div class="spriteLink">
-                <div class="clickable hoverable" id="spriteAnchor_email">
+            <section class="spriteLink">
+                <div class="clickable hoverable" id="spriteAnchor_email" data-action="openContent">
                     <div class="animatedSprite" id="email"></div>
                 </div>
                 <p class="linkTitle"> CONTACT </p>
-            </div>
+            </section>
 
         </div>
 
