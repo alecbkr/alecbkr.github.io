@@ -1,5 +1,6 @@
 const allContent = document.querySelectorAll(".content");
 const contentTitle = document.querySelector("#contentTitle");
+const contentContainer = document.querySelector("#contentContainer");
 
 export function openContent(id) {
     
@@ -9,6 +10,7 @@ export function openContent(id) {
             content.classList.remove("active");
         })
         selectedContent.classList.add("active");
+        contentContainer.style.width = selectedContent.dataset.width;
         contentTitle.textContent = selectedContent.dataset.title;
 
     }

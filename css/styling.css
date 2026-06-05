@@ -3,7 +3,7 @@
     --backgroundSecondary: rgb(30, 30, 30);
 
     --lightPrimary: red;
-    --ambientPrimary: rgb(133, 0, 0);
+    --ambientPrimary: rgb(114, 0, 0);
 
     --lightSecondary: rgb(116, 116, 116);
     --ambientSecondary: rgb(56, 56, 56);
@@ -43,6 +43,14 @@ h2 {
     font-weight: 600;
     transform: scaleX(0.9);
     transform-origin: left center;
+}
+
+textarea {
+    resize: none;
+}
+
+input:focus, textarea:focus {
+    outline: 2px solid var(--lightPrimary);
 }
 
 .textbox {

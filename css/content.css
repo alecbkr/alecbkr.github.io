@@ -4,8 +4,8 @@
     position: relative;
     /* margin-left: 15vw;
     margin-right: 15vw; */
-    margin: 70px 15vw 30px 15vw;
-    /* gap: 100px; */
+    margin: 70px auto 30px auto;
+    width: 60vw;
     padding: 10px 10px 10px 10px;
 }
 
@@ -54,6 +54,16 @@
 #skills {
     display: flex;
     flex-direction: column;
+    gap: 2px;
+
+    color: rgb(184, 184, 184);
+}
+
+#skillsTitle {
+    color: whitesmoke;
+    font-family: system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 17px;
 }
 
 .profileSkill {
@@ -97,4 +107,13 @@
 
     gap: 10vw;
     /* margin: 0; */
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    font-size: 18px;
+    font-family: "IBM Plex Sans", sans-serif;
 }

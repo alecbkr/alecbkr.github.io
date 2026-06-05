@@ -40,15 +40,18 @@
 
         </section>
 
+
+
         <section id="contentContainer" class="container">
             <h2 id="contentTitle" class="container">ALECBKR\PROFILE</h2>
 
-            <section id="profileContent" class="content active" data-title="ALECBKR\PROFILE">
+            <section id="profileContent" class="content active" data-title="ALECBKR\PROFILE" data-width="clamp(450px, 60vw, 900px)">
                 <div id="profileVisuals">
 
                     <img id="profilePic" class="container" src="assets/pfp.jpg" alt="pfp">
                     
                     <section id="skills">
+                        <p id="skillsTitle">LANGUAGES</p>
 
                         <div class="profileSkill">
                             <span class="profileSkillName">C</span>
@@ -86,12 +89,21 @@
                 </p>
             </section>
 
-            <section id="projectContent" class="content" data-title="ALECBKR\PROJECTS">
+            <section id="projectContent" class="content" data-title="ALECBKR\PROJECTS" data-width="clamp(450px, 60vw, 900px)">
                 
             </section>
 
-            <section id="contactContent" class="content" data-title="ALECBKR\CONTACT">
+            <section id="contactContent" class="content" data-title="ALECBKR\CONTACT" data-width="35vw">
+                <form class="contactForm">
+                    <label>NAME</label>
+                    <input type="text" required>
+                    <label>EMAIL</label>
+                    <input type="email" required>
+                    <label>MESSAGE</label>
+                    <textarea rows="6"></textarea>
 
+                    <input type="submit">
+                </form>
             </section>
         </section>
 
