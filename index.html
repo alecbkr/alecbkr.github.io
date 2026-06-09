@@ -43,40 +43,41 @@
 
 
         <section id="contentContainer" class="container">
-            <h2 id="contentTitle" class="container">ALECBKR\PROFILE</h2>
+            
+            <h2 id="contentTitle" class="container">
+                <span id="contentPrefix">ALECBKR\</span><span id="contentSection">PROFILE</span>
+            </h2>
 
-            <section id="profileContent" class="content active" data-title="ALECBKR\PROFILE" data-width="clamp(0px, 90vw, 780px)">
-                <div id="profileVisuals">
+            <article id="profileContent" class="content active" data-title="PROFILE" data-width="clamp(0px, 90vw, 780px)">
+                <section id="profileVisuals">
 
                     <img id="profilePic" class="container" src="assets/pfp.jpg" alt="pfp">
                     
-                    <section id="skills">
+                    <ul id="skills">
                         <p id="skillsTitle">LANGUAGES</p>
 
-                        <div class="profileSkill">
+                        <li class="profileSkill">
                             <span class="profileSkillName">C</span>
                             <div class="skillBar" style="--level: 8"> </div>
-                        </div>
+                        </li>
 
-                        <div class="profileSkill">
+                        <li class="profileSkill">
                             <span class="profileSkillName">C++</span>
                             <div class="skillBar" style="--level: 9"> </div>
-                        </div>
+                        </li>
 
-                        <div class="profileSkill">
+                        <li class="profileSkill">
                             <span class="profileSkillName">JAVA</span>
                             <div class="skillBar" style="--level: 6"> </div>
-                        </div>
+                        </li>
 
-                        <div class="profileSkill">
+                        <li class="profileSkill">
                             <span class="profileSkillName">PYTHON</span>
                             <div class="skillBar" style="--level: 7"> </div>
-                        </div>
-                    </section>
+                        </li>
+                    </ul>
                     
-
-
-                </div>
+                </section>
                 
                 <p  id="profileDescription">
                     My name's Alec, I'm a recent <a href="https://www.ucf.edu/">UCF</a> graduate with a shiny new bachelor's in Computer Science. 
@@ -87,22 +88,43 @@
                     You can read about and view them below.
                     I look forward to participating in many more projects in the future.
                 </p>
+            </article>
+
+            <section id="projectContent" class="content" data-title="PROJECTS" data-width="clamp(0px, 90vw, 780px)">
+                <article class="projectCard container">
+                    <div class="projectTitle">
+                        <img src="assets/icons/prism.png" class="projectIcon">
+                        <h3>PRISM - SHADER SANDBOX</h3>
+                    </div>
+                    
+                </article>
+
+                <article class="projectCard container">
+                    <div class="projectTitle">
+                        <img src="assets/icons/simpletonchess.png" class="projectIcon">
+                        <h3>SIMPLETON CHESS</h3>
+                    </div>
+                    
+                </article>
+
+                <article class="projectCard container">
+                    <div class="projectTitle">
+                        <img src="assets/icons/shuzzy.png" class="projectIcon">
+                        <h3>SHUZZY+</h3>
+                    </div>
+                </article>
             </section>
 
-            <section id="projectContent" class="content" data-title="ALECBKR\PROJECTS" data-width="clamp(0px, 90vw, 780px)">
-                
-            </section>
+            <section id="contactContent" class="content" data-title="CONTACT" data-width="clamp(0px, 90vw, 400px)">
+                <form class="contactForm" action="https://formspree.io/f/mdavaggz" method="POST">
+                    <label for="name">NAME</label>
+                    <input id="name" type="text" name="name" maxlength="50" required>
+                    <label for="email">EMAIL</label>
+                    <input id="email" type="email" name="email" maxlength="50" required>
+                    <label for="message">MESSAGE</label>
+                    <textarea id="message" name="message" rows="7" maxlength="300"></textarea>
 
-            <section id="contactContent" class="content" data-title="ALECBKR\CONTACT" data-width="clamp(0px, 90vw, 400px)">
-                <form class="contactForm">
-                    <label>NAME</label>
-                    <input type="text" required>
-                    <label>EMAIL</label>
-                    <input type="email" required>
-                    <label>MESSAGE</label>
-                    <textarea rows="7"></textarea>
-
-                    <input type="submit">
+                    <button type="submit" class="button">SEND</button>
                 </form>
             </section>
         </section>
@@ -111,26 +133,28 @@
 
             <section class="spriteLink">
                 <div class="clickable hoverable" id="spriteAnchor_profile" data-action="openContent">
-                    <div class="animatedSprite" id="profile"></div>
+                    <div class="animatedSprite" id="profileSprite"></div>
                 </div>
                 <p class="linkTitle"> PROFILE </p>
             </section>
 
             <section class="spriteLink">
                 <div class="clickable hoverable" id="spriteAnchor_chest" data-action="openContent">
-                    <div class="animatedSprite" id="chest"></div>
+                    <div class="animatedSprite" id="chestSprite"></div>
                 </div>
                 <p class="linkTitle"> PROJECTS </p>
             </section>
 
             <section class="spriteLink">
                 <div class="clickable hoverable" id="spriteAnchor_email" data-action="openContent">
-                    <div class="animatedSprite" id="email"></div>
+                    <div class="animatedSprite" id="emailSprite"></div>
                 </div>
                 <p class="linkTitle"> CONTACT </p>
             </section>
 
         </div>
+
+
 
         
         

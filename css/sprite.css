@@ -55,7 +55,7 @@
 }
 
 
-#profile {
+#profileSprite {
     background-image: url("../assets/sprites/profile_spritesheet.png");
     width: 200px;
     height: 200px;
@@ -74,7 +74,7 @@
 }
 
 
-#chest {
+#chestSprite {
     background-image: url("../assets/sprites/chest_spritesheet.png");
     width: 180px;
     height: 140px;
@@ -100,7 +100,7 @@
 }
 
 
-#email {
+#emailSprite {
     background-image: url("../assets/sprites/email_spritesheet.png");
     width: 200px;
     height: 200px;
@@ -151,6 +151,8 @@
     height: 48px;
 
     position: absolute;
-    transform: translate(190px, 20px);
+    /* transform: translate(190px, 20px); */
+    left: 100%; 
+    top: 14%;
     /* background-color: orange; */
 }
