@@ -24,11 +24,11 @@
 
    
     line-height: 1;
-    padding-right: 1%;
+    padding-right: 0.2%;
     text-shadow:
         -1px 0px 0px red;
 
-    width: 99%;
+    width: 99.8%;
     background: linear-gradient(
         to left,
         var(--ambientPrimary),
