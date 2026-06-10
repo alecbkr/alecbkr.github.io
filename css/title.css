@@ -12,8 +12,34 @@
     /* transform: scale(clamp(1%, 12%, 10%)); */
 }
 
+.subtitle {
+    /* position: absolute; */
+    /* margin-left: auto; */
+    text-align: right;
+    font-family: system-ui, sans-serif;
+    color: var(--textColorPrimary);
+    font-weight: 600;
+
+    
+
+   
+    line-height: 1;
+    padding-right: 1%;
+    text-shadow:
+        -1px 0px 0px red;
+
+    width: 99%;
+    background: linear-gradient(
+        to left,
+        var(--ambientPrimary),
+        var(--backgroundPrimary)
+    )
+
+}
+
 #socialsContainer {
     display: flex;
+    margin-top: 5px;
     padding: 2px 2px 2px 2px;
     gap: 2px;   
     width: 100%;

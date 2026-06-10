@@ -25,7 +25,7 @@ p, ul, body {
 h1 {
     
     margin-bottom: 0;
-
+    line-height: 1;
     font-size: 50px;
     font-family: system-ui, sans-serif;
     font-weight: 700;
@@ -146,4 +146,23 @@ input:focus, textarea:focus {
     border-top-color: var(--lightSecondary);
     border-left-color: var(--ambientSecondary);
     border-bottom-color: var(--ambientSecondary);
+}
+
+footer {
+    font-family: system-ui, sans-serif;
+    font-weight: 500;
+    /* background-color: var(--backgroundPrimary); */
+    background: linear-gradient(
+        to top,
+        var(--backgroundSecondary) 0%,
+        var(--backgroundSecondary) 60%,
+        var(--backgroundPrimary) 100%
+    );
+
+
+    display: flex;
+    justify-content: center;
+    margin-top: 2cm;
+    padding-top: 10px;
+    
 }
