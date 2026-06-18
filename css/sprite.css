@@ -67,10 +67,10 @@
     --hoverScale: .45;
     transform: translate(var(--translationX), var(--translationY)) scale(var(--baseScale));
 
-    --lastFrameX: -600px;
+    /* --lastFrameX: -600px;
     --frameInterval: .90s;
     --numFrames: 3;
-    --loop: infinite;
+    --loop: infinite; */
 }
 
 

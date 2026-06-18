@@ -12,7 +12,7 @@ const clickActions = {
 
 const spriteToContent = {
     spriteAnchor_profile: profileContent,
-    spriteAnchor_chest: projectContent,
+    spriteAnchor_chest: projectsContent,
     spriteAnchor_email: contactContent
 }
 

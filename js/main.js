@@ -1,6 +1,6 @@
 import {initSprites} from "./sprite.js"
 import {setDialogue, speak} from "./speak.js";
-import {initContent} from "./content.js"
+import {initContent, landOnContent} from "./content.js"
 
 const batTextbox = document.querySelector(".textbox");
 
@@ -12,6 +12,7 @@ async function startup() {
 
     initSprites();
     initContent();
+    landOnContent();
 }
 
 startup();

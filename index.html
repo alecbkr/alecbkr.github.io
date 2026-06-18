@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="css/sprite.css">
         <link rel="stylesheet" href="css/title.css">
         <link rel="stylesheet" href="css/content.css">
+        <link rel="stylesheet" href="css/hotbar.css">
         
         <script type="module" src="js/main.js" defer></script>
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -50,7 +51,7 @@
                 <span id="contentPrefix">ALECBKR\</span><span id="contentSection">PROFILE</span>
             </h2>
 
-            <article id="profileContent" class="content active" data-title="PROFILE" data-width="clamp(0px, 90vw, 780px)">
+            <article id="profileContent" class="content" data-title="PROFILE" data-width="clamp(0px, 90vw, 780px)">
                 <section id="profileVisuals">
 
                     <img id="profilePic" class="container" src="assets/pfp.jpg" alt="pfp">
@@ -92,11 +93,42 @@
                 </p>
             </article>
 
-            <section id="projectContent" class="content" data-title="PROJECTS" data-width="clamp(0px, 90vw, 780px)">
+            <section id="projectsContent" class="content" data-title="PROJECTS" data-width="clamp(0px, 90vw, 780px)">
                 <article class="projectCard container">
                     <div class="projectTitle">
                         <img src="assets/icons/prism.png" class="projectIcon">
                         <h3>PRISM - SHADER SANDBOX</h3>
+                    </div>
+
+                    <div class="imageShowcase container">
+                        <div class="imageViewport container">
+                            <img src="assets/project images/prism/prism-demo1.gif" class="showcaseImage">
+                            <img src="assets/project images/prism/prism-demo2.png" class="showcaseImage">
+                            <img src="assets/project images/prism/prism-demo3.png" class="showcaseImage">
+                        </div>
+                        <div class="imageSelector"></div>
+                    </div>
+
+                    <div class="projectDescription">
+                        <p>
+                            A shader development environment built on a custom OpenGL rendering engine. 
+                            Prism abstracts rendering and resource management while maintaining direct 
+                            access to OpenGL's programmable pipeline. This streamlines the process of 
+                            writing, testing, and debugging GLSL shader programs 
+                            through a unified interface that combines a real-time 3D viewport, code editor, console, 
+                            and asset manager/importer.
+
+                            <!-- A shader development environment built on a custom OpenGL rendering engine. 
+                            Prism streamlines the process of writing, testing, and debugging GLSL shader programs 
+                            through a unified interface that combines a real-time 3D viewport, code editor, console, 
+                            and asset inspector. -->
+
+                            <!-- The underlying engine abstracts rendering and resource management while maintaining direct 
+                            access to OpenGL's programmable pipeline. Users can import models and textures, modify 
+                            shader code, and immediately observe the results in real time, accelerating the development 
+                            and iteration of custom rendering techniques. -->
+                            
+                        </p>
                     </div>
                     
                 </article>
@@ -106,6 +138,23 @@
                         <img src="assets/icons/simpletonchess.png" class="projectIcon">
                         <h3>SIMPLETON CHESS</h3>
                     </div>
+
+                    <div class="imageShowcase container">
+                        <div class="imageViewport container">
+                            <img src="assets/project images/chess/chess-demo1.gif" class="showcaseImage">
+                            <img src="assets/project images/chess/chess-demo2.png" class="showcaseImage">
+                            <img src="assets/project images/chess/chess-demo3.png" class="showcaseImage">
+                        </div>
+                        <div class="imageSelector"></div>
+                    </div>
+                        
+                    <p class="projectDescription">
+                        Simpleton Chess is a lightweight console chess game that demonstrates efficient 
+                        game-state management and move validation in a text-based environment. 
+                        The game draws a custom ASCII board, enforces the rules of chess through legal 
+                        move checking, and improves player interaction with visual indicators that highlight 
+                        every valid move available to the selected piece.
+                    </p>
                     
                 </article>
 
@@ -114,7 +163,22 @@
                         <img src="assets/icons/shuzzy.png" class="projectIcon">
                         <h3>SHUZZY+</h3>
                     </div>
+
+                    <div class="imageShowcase container">
+                        <div class="imageViewport container">
+                            <img src="assets/project images/shuzzy/shuzzy-demo2.png" class="showcaseImage">
+                            <img src="assets/project images/shuzzy/shuzzy-demo1.png" class="showcaseImage">
+                        </div>
+                        <div class="imageSelector"></div>
+                    </div>
                 </article>
+
+                <div class="imageInspector">
+                    <div class="backdrop"></div>
+                    <img id="inspectorImg">
+                    <div class="closeBox"></div>
+                </div>
+
             </section>
 
             <section id="contactContent" class="content" data-title="CONTACT" data-width="clamp(0px, 90vw, 400px)">
@@ -131,33 +195,40 @@
             </section>
         </section>
 
-        <div class="linkContainer">
+        <section class="hotbar">
 
-            <section class="spriteLink">
+            <div id="platform">
+                <img src="assets/sprites/platform-left.png" id="platformSide">
+                <img src="assets/sprites/platform-mid.png" id="platformMid">
+                <img src="assets/sprites/platform-right.png" id="platformSide">
+                <div id="platBackdrop"></div>
+            </div>
+
+            <div class="spriteLink">
                 <div class="clickable hoverable" id="spriteAnchor_profile" data-action="openContent">
                     <div class="animatedSprite" id="profileSprite"></div>
                 </div>
                 <p class="linkTitle"> PROFILE </p>
-            </section>
+            </div>
 
-            <section class="spriteLink">
+            <div class="spriteLink">
                 <div class="clickable hoverable" id="spriteAnchor_chest" data-action="openContent">
                     <div class="animatedSprite" id="chestSprite"></div>
                 </div>
                 <p class="linkTitle"> PROJECTS </p>
-            </section>
+            </div>
 
-            <section class="spriteLink">
+            <div class="spriteLink">
                 <div class="clickable hoverable" id="spriteAnchor_email" data-action="openContent">
                     <div class="animatedSprite" id="emailSprite"></div>
                 </div>
                 <p class="linkTitle"> CONTACT </p>
-            </section>
+            </div>
 
-        </div>
+        </section>
 
         <footer>
-            <p>&#169 2026 Alec Baker. All Rights Reserved.</p>
+            <p>Copyright &#169 2026 Alec Baker</p>
         </footer>
 
 

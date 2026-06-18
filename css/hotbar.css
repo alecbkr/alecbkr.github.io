@@ -1,0 +1,82 @@
+.hotbar {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10vw;
+    /* margin: 0; */
+    /* bottom: 0; left: 50%;
+    transform: translateX(-50%); */
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#platform {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+
+    bottom: 0%;
+    padding: 10px 10px 10px 10px;
+
+    line-height: 0;
+
+    /* width: 40%; */
+
+    --midSegmentWidth: clamp(300px, 40vw, 800px);
+    
+}
+
+#platform.img {
+    display: block;
+    image-rendering: pixelated;
+}
+
+#platformSide {
+    /* OG DIMENSIONS: w = 120px h = 240px */
+    width: 30px;
+    height: 60px;
+}
+
+#platformMid {
+    /* width: 60vw; */
+    width: var(--midSegmentWidth);
+    height: 60px;
+}
+
+#platBackdrop {
+    position: fixed;
+    width: var(--midSegmentWidth);
+    height: 40px;
+
+    transform: translateY(-40px);
+
+
+    padding-right: 5px;
+    padding-left: 5px;
+    background: linear-gradient(
+        to top,
+    rgba(0, 0, 0, 0.8) 40%,
+    rgba(0, 0, 0, 0.0) 
+    );
+
+    
+}
+
+.linkTitle {
+    color: whitesmoke;
+    font-family: system-ui, sans-serif;
+    font-weight: 600;
+
+    background-color: rgb(58, 0, 0);
+    padding: 3px;
+    border: 1px solid black;
+
+    text-align: center;
+    margin: 0;
+
+    z-index: 1;
+}

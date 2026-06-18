@@ -7,6 +7,9 @@
     margin: 70px auto 30px auto;
     width: clamp(0px, 90vw, 780px);
     padding: 10px 10px 10px 10px;
+
+    /* overflow: hidden; */
+
 }
 
 #contentTitle {
@@ -34,9 +37,9 @@
     display: block;
 }
 
-#projectContent.active {
+#projectsContent.active {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     gap: 10px;
 }
 
@@ -110,15 +113,6 @@
 }
 
 
-.linkContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    gap: 10vw;
-    /* margin: 0; */
-}
-
 .contactForm {
     display: flex;
     flex-direction: column;
@@ -128,26 +122,45 @@
     font-family: "IBM Plex Sans", sans-serif;
 }
 
-#projectContent {
+#projectsContent {
     gap: 10px;
     justify-content: left;
-    align-items: center;
+    /* align-items: center; */
+    
 }
 
 .projectCard {
-    /* flex: 0 1 250px; */
-    /* min-width: 100px;
-    max-width: 250px; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
 
-    background-color: var(--ambientSecondary);
-    
 
-    /* background-color: red; */
+    /* background: linear-gradient(
+        to bottom,
+        var(--backgroundSecondary),
+        var(--ambientPrimary)
+    ) */
+    /* background-color: rgb(26, 0, 0); */
 }
 
 .projectTitle {
+    position: relative;
     display: flex;
     gap: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: 100%;
+
+    background-color: var(--ambientSecondary);
+
+    /* background: linear-gradient(
+        to right,
+        var(--ambientSecondary),
+        var(--lightPrimary)
+    ) */
+
+    /* background-color: var(--backgroundPrimary); */
 }
 
 .projectIcon {
@@ -155,4 +168,120 @@
 
     width: var(--projectIconSize);
     height: var(--projectIconSize);
+}
+
+.imageShowcase {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 95%;
+    border-right: 0; border-left: 0; border-top: 0;
+
+}
+
+.showcaseImage {
+    display: none;
+    /* width: 100%; */
+}
+
+.showcaseImage.active {
+    display: block;
+}
+
+.projectDescription {
+    padding: 5px;
+    
+}
+
+.imageViewport {
+    width: 350px;
+    height: 220px;
+    overflow: hidden;
+    background-color: var(--backgroundPrimary);
+}
+
+.imageViewport img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    cursor: pointer;
+}
+
+.imageSelector {
+    /* background-color: yellow; */
+    display: flex;
+    gap: 5px;
+    padding: 5px;
+    
+}
+
+.imageSelectorNode {
+    /* size: 25px; */
+    background-color: var(--lightSecondary);
+    width: 20px;
+    height: 10px;
+
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.imageSelectorNode:hover {
+    background-color: var(--ambientPrimary);
+}
+
+.imageSelectorNode.active {
+    background-color: var(--lightPrimary);
+}
+
+.imageInspector {
+    display: none;
+}
+
+.imageInspector.active {
+    position: fixed;
+    top: 0; left: 0;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+
+    background: rgba(0, 0, 0, 0.7); 
+    /* background-color: yellow; */
+    
+    width: 100%; height: 100%;
+
+    z-index: 99;
+}
+
+.imageInspector img {
+    position: fixed;
+    
+
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    
+    max-width: 90vw;
+    max-height: 90vh;
+    /* width: clamp(0px, 90%, 900px); 
+    height: clamp(0px, 90%, 900px);  */
+
+    width: auto;
+    height: auto;
+
+    /* width: 100%; height: 100%; */
+    object-fit: contain;
+}
+
+.closeBox {
+    position: fixed;
+    width: 100%; height: 100vh;
+    cursor: pointer;
+    /* background-color: white; */
+    z-index: 100;
+
+    user-select: none;
+    -webkit-user-select: none;
+
 }

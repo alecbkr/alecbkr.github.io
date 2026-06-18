@@ -13,15 +13,103 @@ export function openContent(id) {
         contentContainer.style.width = selectedContent.dataset.width;
         contentSection.textContent = selectedContent.dataset.title;
 
+        const contentId = selectedContent.id;
+        const sectionName = contentId.replace("Content", "");
+        window.location.hash = sectionName;
+        console.log(sectionName);
+    }
+}
+
+export function landOnContent() {
+    const contentString = window.location.hash.substring(1);
+
+    switch (contentString) {
+        case "profile":
+            openContent("profileContent");
+            break;
+
+        case "projects":
+            openContent("projectsContent");
+            break;
+        
+        case "contact":
+            openContent("contactContent");
+            break;
+        
+        default:
+            openContent("profileContent");
     }
 }
 
 
 
-export function initContent() {
+function selectImage(node) {
+    const parentShowcase = node.closest(".imageShowcase");
+    const imageIdx = node.dataset.imageIdx;
+    const allImages = parentShowcase.querySelectorAll(".showcaseImage");
+    const allNodes = parentShowcase.querySelectorAll(".imageSelectorNode");
+
+    allImages.forEach(img => img.classList.remove("active"));
+    allNodes.forEach(_node => _node.classList.remove("active"));
+
+    allImages[imageIdx].classList.add("active");
+    node.classList.add("active");
+}
+
+
+function initImageShowcases() {
+    document.querySelectorAll(".imageShowcase").forEach((showcase) => {
+
+        const images = showcase.querySelectorAll(".showcaseImage");
+        const imageInspector = document.querySelector(".imageInspector");
+        const inspectorImg = document.querySelector("#inspectorImg");
+        const closebox = document.querySelector(".closeBox");
+
+        images.forEach((image) => {
+            image.addEventListener("click", () => {
+                inspectorImg.src = image.src;
+                imageInspector.classList.add("active");
+            })
+        })
+
+        closebox.addEventListener("click", () => {
+            imageInspector.classList.remove("active");
+        })
+
+
+
+        const imageCnt = images.length;
+        const imageSelector = showcase.querySelector(".imageSelector");
+
+        for (let i = 0; i < imageCnt; i++) {
+            const imageNode = document.createElement("div");
+            imageNode.classList.add("imageSelectorNode");
+            imageNode.dataset.imageIdx = i;
+
+            imageSelector.append(imageNode);
+
+
+        }
+    })
+
+    document.querySelectorAll(".imageSelectorNode").forEach((node) => {
+        node.addEventListener("click", () => {
+            selectImage(node);
+        })
+
+        if (node.dataset.imageIdx == 0) {
+            selectImage(node);
+        }
+    })
+
+}
+
+
+
+function initProfile() {
     document.querySelectorAll(".skillBar").forEach((skillBar) => {
         const level = Number(skillBar.style.getPropertyValue("--level"));
-    
+
         for (let i = 0; i < 10; i++ ) {
             const segment = document.createElement("div");
             segment.classList.add("segment");
@@ -33,3 +121,11 @@ export function initContent() {
         }
     });
 }
+
+
+export function initContent() {
+    initProfile();
+    initImageShowcases();
+}
+
+

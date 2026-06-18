@@ -15,11 +15,16 @@
 html {
     color: var(--textColorPrimary);
     background-color: var(--backgroundPrimary);
+    font-family: "IBM Plex Sans", sans-serif;
 }
 
 p, ul, body {
     margin: 0;
     padding: 0;
+}
+
+body.no-scroll {
+    overflow: hidden;
 }
 
 h1 {
@@ -164,5 +169,6 @@ footer {
     justify-content: center;
     margin-top: 2cm;
     padding-top: 10px;
+    padding-bottom: 10px;
     
 }
