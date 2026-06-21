@@ -1,5 +1,13 @@
+.hotbarContainer {
+    flex: 1;
+    /* position: sticky; */
+    /* background-color: yellow; */
+}
+
 .hotbar {
-    position: fixed;
+    /* position: absolute; */
+    position: relative; 
+    /* position: fixed; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,20 +22,20 @@
     right: 0;
 }
 
-#platform {
+.hotbar.fixed {
     position: fixed;
+}
+
+
+#platform {
+    position: absolute;
     display: flex;
     justify-content: center;
 
-    bottom: 0%;
     padding: 10px 10px 10px 10px;
 
     line-height: 0;
-
-    /* width: 40%; */
-
     --midSegmentWidth: clamp(300px, 40vw, 800px);
-    
 }
 
 #platform.img {
@@ -48,7 +56,7 @@
 }
 
 #platBackdrop {
-    position: fixed;
+    position: absolute;
     width: var(--midSegmentWidth);
     height: 40px;
 
@@ -62,7 +70,6 @@
     rgba(0, 0, 0, 0.8) 40%,
     rgba(0, 0, 0, 0.0) 
     );
-
     
 }
 

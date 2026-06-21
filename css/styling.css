@@ -23,8 +23,11 @@ p, ul, body {
     padding: 0;
 }
 
-body.no-scroll {
-    overflow: hidden;
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 h1 {
