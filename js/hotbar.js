@@ -2,7 +2,7 @@ const hotbarContainer = document.querySelector(".hotbarContainer");
 const hotbar = document.querySelector(".hotbar");
 
 export function initHotbar() {
-    hotbar.classList.add("fixed");
+    
 
     const observer = new IntersectionObserver((entries) => {
         const entry = entries[0];
