@@ -16,6 +16,17 @@ const spriteToContent = {
     spriteAnchor_email: contactContent
 }
 
+export function clickContentSprite(selAnchor, allAnchors) {
+    const contentID = spriteToContent[selAnchor.id].id;
+    openContent(contentID);
+    
+    allAnchors.forEach((anchor) => {
+        anchor.classList.remove("active");
+    });
+
+    selAnchor.classList.add("active");
+}
+
 export function initSprites() {
 
     hoverableAnchors.forEach((anchor) => {
@@ -45,7 +56,7 @@ export function initSprites() {
 
 
     clickableAnchors.forEach((anchor) => {
-        anchor.addEventListener("pointerdown", () => {
+        anchor.addEventListener("pointerdown", (event) => {
             anchor.setPointerCapture(event.pointerId);
 
             const sprite = anchor.querySelector(".animatedSprite");
@@ -63,8 +74,11 @@ export function initSprites() {
                     action(1, batTextbox);
                 }
                 if (action == openContent) {
-                    const contentID = spriteToContent[anchor.id].id;
-                    action(contentID);
+                    // const contentID = spriteToContent[anchor.id].id;
+                    // action(contentID);
+                    // anchor.classList.add("active");
+
+                    clickContentSprite(anchor, clickableAnchors);
                 }
             }
 
@@ -77,6 +91,7 @@ export function initSprites() {
     })
 
 }
+
 
 
 

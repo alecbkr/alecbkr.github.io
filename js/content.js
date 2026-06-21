@@ -23,20 +23,19 @@ export function landOnContent() {
     const contentString = window.location.hash.substring(1);
 
     switch (contentString) {
-        case "profile":
-            openContent("profileContent");
-            break;
-
         case "projects":
             openContent("projectsContent");
+            document.querySelector("#spriteAnchor_chest").classList.add("active");
             break;
         
         case "contact":
             openContent("contactContent");
+            document.querySelector("#spriteAnchor_email").classList.add("active");
             break;
         
         default:
             openContent("profileContent");
+            document.querySelector("#spriteAnchor_profile").classList.add("active");
     }
 }
 

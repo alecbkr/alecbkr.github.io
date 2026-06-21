@@ -6,6 +6,37 @@
     gap: .2cm;
 }
 
+.clickable.active {
+    transform: translateY(-20px);
+
+
+}
+
+.clickable.active::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+
+    /* background: radial-gradient(
+        circle,
+        rgba(0, 0, 0, 1),
+        transparent 70%
+    ); */
+
+    background: rgba(0, 0, 0, 0.1);
+
+    transform:
+        translateY(45px)
+        /* scaleX(.8) */
+        scaleY(.4);
+        
+        
+    z-index: -1;
+
+    
+}
+
 
 .animatedSprite {
     display: block;
@@ -15,6 +46,7 @@
     filter: none !important;
 
     transform-origin:center center;
+    z-index: 2;
 
     /* background-position: 0 0; */
     /* background-color: orange; */

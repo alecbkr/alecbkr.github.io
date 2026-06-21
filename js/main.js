@@ -13,8 +13,9 @@ async function startup() {
 
     initSprites();
     initContent();
-    landOnContent();
     initHotbar();
+    landOnContent();
+    
 }
 
 startup();
