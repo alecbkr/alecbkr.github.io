@@ -64,7 +64,6 @@ export function initSprites() {
                 }
                 if (action == openContent) {
                     const contentID = spriteToContent[anchor.id].id;
-                    console.log(contentID);
                     action(contentID);
                 }
             }

@@ -9,10 +9,8 @@ export function initHotbar() {
 
         if (entry.isIntersecting) {
             hotbar.classList.remove("fixed");
-            console.log("unfixed");
         } else {
             hotbar.classList.add("fixed");
-            console.log("fixin");
         }
     });
 

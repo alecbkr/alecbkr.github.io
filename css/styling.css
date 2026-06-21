@@ -1,6 +1,6 @@
 :root {
     --backgroundPrimary: rgb(20, 20, 20);
-    --backgroundSecondary: rgb(30, 30, 30);
+    --backgroundSecondary: rgb(40, 40, 40);
 
     --textColorPrimary: whitesmoke;
     --textColorSecondary: rgb(184, 184, 184);
@@ -29,6 +29,7 @@ body {
     flex-direction: column;
     flex: 1;
 }
+
 
 h1 {
     

@@ -16,7 +16,6 @@ export function openContent(id) {
         const contentId = selectedContent.id;
         const sectionName = contentId.replace("Content", "");
         window.location.hash = sectionName;
-        console.log(sectionName);
     }
 }
 

@@ -1,5 +1,6 @@
 let dialogue;
 let speaking = false;
+let lastPickedIdx;
 
 
 function greet(target) {
@@ -10,8 +11,16 @@ function greet(target) {
 
 function chat(target) {
     const choices = dialogue.chatter;
-    const pick = choices[Math.floor(Math.random() * choices.length)];
-    updateTextbox(target, pick, 2000);
+    let pickedIdx = Math.floor(Math.random() * choices.length);
+    
+    
+    if (pickedIdx == lastPickedIdx) {
+        pickedIdx = (pickedIdx + 1) % choices.length;
+    }
+
+    lastPickedIdx = pickedIdx;
+    const pickedPhrase = choices[pickedIdx];
+    updateTextbox(target, pickedPhrase, 2000);
 }
 
 function updateTextbox(target, phrase, duration) {
