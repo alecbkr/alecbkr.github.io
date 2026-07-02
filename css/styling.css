@@ -148,14 +148,16 @@ input:focus, textarea:focus {
 } */
 
 .container {
+    --lightBorder: var(--lightSecondary);
+    --ambientBorder: var(--ambientSecondary);
 
     background-color: var(--backgroundSecondary);
     border: solid 2px;
     border-radius: 2px;
-    border-right-color: var(--lightSecondary);
-    border-top-color: var(--lightSecondary);
-    border-left-color: var(--ambientSecondary);
-    border-bottom-color: var(--ambientSecondary);
+    border-right-color: var(--lightBorder);
+    border-top-color: var(--lightBorder);
+    border-left-color: var(--ambientBorder);
+    border-bottom-color: var(--ambientBorder);
 }
 
 .highlight {
