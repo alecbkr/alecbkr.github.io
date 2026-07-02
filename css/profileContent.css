@@ -1,0 +1,139 @@
+#profileContent.active, #contactContent.active{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#profileDescription {
+    font-size: 18px;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+
+
+#profileIntro {
+    place-items: center;
+
+    font-size: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+
+
+#profileText {
+    /* display: flex;
+    flex-direction: column; */
+
+    font-size: 18px;
+    font-weight: 500;
+    gap: 20px;
+    padding: 5px 5px 5px 5px;
+}
+
+
+#profileVisuals {
+    display: flex;
+    width: fit-content;
+    float: right;
+    gap: 10px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+#profilePic {
+    --size: 180px;
+    border-radius: 4px;
+    width: var(--size); height: var(--size);
+    float: right;
+    margin-right: 20px;
+    margin-left: 20px;
+    /* margin-top: 5px; */
+}
+
+#skillsContainer {
+    /* padding: 30px 0px 30px 0px; */
+    background-color: var(--lightSecondary);
+}
+
+#sectionTitle {
+    font-size: 20px;
+    padding: 5px 5px 15px 5px;
+    font-weight: 600;
+}
+
+#profileSkills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    justify-items: center;
+    padding-bottom: 20px;
+    /* gap: 0; */
+    
+}
+
+@media (max-width: 800px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.skillBox {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    max-width: 200px;
+    color: var(--textColorSecondary);
+    /* background-color: var(--backgroundSecondary); */
+    /* min-width: 100px; */
+   
+}
+
+.skillList {
+    width: clamp(20px, 20vw, 200px);
+}
+
+#skillsTitle {
+    color: whitesmoke;
+    font-family: system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.profileSkill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+
+    border-top: solid 2px var(--ambientSecondary);
+    font-family: system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+}
+
+.skillBar {
+    display: flex;
+    width: 80px; height: 10px;
+    margin-left: auto;
+
+}
+
+.skillBar .segment {
+    /* background-color: rgb(116, 116, 116); */
+    background-color: var(--ambientPrimary);
+    width: 10%;
+    height: 100%;
+    border: 1px solid var(--backgroundSecondary);
+}
+
+.skillBar .segment.filled {
+    background-color: var(--lightPrimary);
+}

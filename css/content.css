@@ -14,12 +14,13 @@
 
 #contentTitle {
     background-color: var(--ambientSecondary);
+    font-size: 24px;
 
     position: absolute;
     top: -25px;
     width: fit-content;
     padding: 0 5px 2px 5px;
-    transform: translate(-12px, -7.5px);
+    transform: translate(-12px, -12.5px);
 
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
@@ -33,83 +34,14 @@
     display: none;
 }
 
-#profileContent.active, #contactContent.active{
+#contactContent.active{
     display: block;
 }
 
 #projectsContent.active {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(355px, 1fr));
     gap: 10px;
-}
-
-#profileDescription {
-    font-size: 18px;
-    font-family: "IBM Plex Sans", sans-serif;
-}
-
-#profileVisuals {
-    display: flex;
-    width: fit-content;
-    float: right;
-    gap: 10px;
-    margin-left: 30px;
-    margin-bottom: 10px;
-}
-
-#profilePic {
-    --size: 150px;
-    border-radius: 4px;
-    width: var(--size); height: var(--size);
-}
-
-
-#skills {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-
-    color: var(--textColorSecondary);
-}
-
-#skillsTitle {
-    color: whitesmoke;
-    font-family: system-ui, sans-serif;
-    font-weight: 700;
-    font-size: 17px;
-}
-
-.profileSkill {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    
-
-    border-top: solid 2px var(--ambientSecondary);
-    font-family: system-ui, sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    
-}
-
-.skillBar {
-    display: flex;
-    width: 80px; height: 10px;
-    margin-left: auto;
-
-}
-
-.skillBar .segment {
-    /* background-color: rgb(116, 116, 116); */
-    background-color: var(--ambientPrimary);
-    width: 10%;
-    height: 100%;
-    border: 1px solid var(--backgroundSecondary);
-}
-
-.skillBar .segment.filled {
-    background-color: var(--lightPrimary);
 }
 
 
@@ -144,6 +76,13 @@
     /* background-color: rgb(26, 0, 0); */
 }
 
+.projectIcon {
+    --projectIconSize: 30px;
+
+    width: var(--projectIconSize);
+    height: var(--projectIconSize);
+}
+
 .projectTitle {
     position: relative;
     display: flex;
@@ -153,21 +92,31 @@
     width: 100%;
 
     background-color: var(--ambientSecondary);
-
-    /* background: linear-gradient(
-        to right,
-        var(--ambientSecondary),
-        var(--lightPrimary)
-    ) */
-
-    /* background-color: var(--backgroundPrimary); */
 }
 
-.projectIcon {
-    --projectIconSize: 30px;
+.projectLink {
+    display: flex;
+    align-items: center;
+    /* background-color: yellow; */
+    margin-left: auto;
+}
 
-    width: var(--projectIconSize);
-    height: var(--projectIconSize);
+
+.projectLinkIcon {
+    position: relative;
+    --iconSize: 30px;
+    width: var(--iconSize);
+    height: var(--iconSize);
+
+    background-color: var(--textColorSecondary);
+    transition: background-color 0.2s ease;
+
+    -webkit-mask: url("../assets/icons/link.png") center / contain no-repeat;
+    mask: url("../assets/icons/link.png") center / contain no-repeat;
+}
+
+.projectLinkIcon:hover {
+    background-color: var(--lightPrimary);
 }
 
 .imageShowcase {
@@ -191,7 +140,7 @@
 }
 
 .projectDescription {
-    padding: 5px;
+    padding: 5px 20px 5px 20px;
     
 }
 

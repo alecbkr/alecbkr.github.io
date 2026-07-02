@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="css/sprite.css">
         <link rel="stylesheet" href="css/title.css">
         <link rel="stylesheet" href="css/content.css">
+        <link rel="stylesheet" href="css/profileContent.css">
         <link rel="stylesheet" href="css/hotbar.css">
         
         <script type="module" src="js/main.js" defer></script>
@@ -52,52 +53,105 @@
             </h2>
 
             <article id="profileContent" class="content" data-title="PROFILE" data-width="clamp(0px, 90vw, 780px)">
-                <section id="profileVisuals">
 
-                    <img id="profilePic" class="container" src="assets/pfp.jpg" alt="pfp">
+                <section id="profileText">
+                    <img id="profilePic" class="container" src="assets/pfp.jpg" alt="profilepicture">
+                    <p id="profileIntro">
+                        Hey, my name's <span class="highlight bold">Alec</span>
+                    </p>
+
+                    <p>
+                        I'm a <span class="highlight">Software Engineer</span> with a bachelor's degree in 
+                        Computer Science and experience building large, real-time applications. I utilize a 
+                        powerful combination of creativity and logicality
+                        when tackling problems that I set out to solve.
+                    </p> <br>
+
+                    <p>
+                        My experience is in building robust back-end systems and tools that demonstrate scalability,
+                        flexibility, and high efficiency. Some of these include graphical rendering pipelines, resource and asset
+                        management systems, and core engine functionality, such as input handling and application timing systems.
+                    </p> <br>
+
+                    <p>
+                        I am proficient in C and C++ and enjoy working with them because of the control they give me
+                        over system resources. My interest in low-level programming has given me a strong understanding 
+                        of foundational computer science concepts that influence the way I design and develop software.
+                    </p> <br>
                     
-                    <ul id="skills">
-                        <p id="skillsTitle">LANGUAGES</p>
-
-                        <li class="profileSkill">
-                            <span class="profileSkillName">C</span>
-                            <div class="skillBar" style="--level: 8"> </div>
-                        </li>
-
-                        <li class="profileSkill">
-                            <span class="profileSkillName">C++</span>
-                            <div class="skillBar" style="--level: 9"> </div>
-                        </li>
-
-                        <li class="profileSkill">
-                            <span class="profileSkillName">JAVA</span>
-                            <div class="skillBar" style="--level: 6"> </div>
-                        </li>
-
-                        <li class="profileSkill">
-                            <span class="profileSkillName">PYTHON</span>
-                            <div class="skillBar" style="--level: 7"> </div>
-                        </li>
-                    </ul>
+                    <p>
+                        Outside of professional development, I'm always brainstorming new ideas and
+                        working on personal projects so I'm never out of practice!
+                    </p>
                     
+
+                </section>
+
+                
+                <section id="skillsContainer">
+
+                    <p id="sectionTitle"> SKILLS</p>
+                    <section id="profileSkills">
+
+                        
+                        <ul class="skillBox">
+                            <p id="skillsTitle">LANGUAGES</p>
+
+                            <li class="profileSkill">
+                                <span class="profileSkillName">C</span>
+                                <div class="skillBar" style="--level: 8"> </div>
+                            </li>
+
+                            <li class="profileSkill">
+                                <span class="profileSkillName">C++</span>
+                                <div class="skillBar" style="--level: 9"> </div>
+                            </li>
+
+                            <li class="profileSkill">
+                                <span class="profileSkillName">JAVA</span>
+                                <div class="skillBar" style="--level: 7"> </div>
+                            </li>
+
+                            <li class="profileSkill">
+                                <span class="profileSkillName">PYTHON</span>
+                                <div class="skillBar" style="--level: 5"> </div>
+                            </li>
+
+                            <li class="profileSkill">
+                                <span class="profileSkillName">JAVASCRIPT</span>
+                                <div class="skillBar" style="--level: 5"> </div>
+                            </li>
+                        </ul>
+
+                        <ul class="skillBox skillList">
+                            <p id="skillsTitle">GRAPHICS</p>
+                            <li class="profileSkill"> OPENGL </li>
+                            <li class="profileSkill"> GLSL </li>
+                            <li class="profileSkill"> ASSIMP </li>
+                            <li class="profileSkill"> IMGUI </li>
+                        </ul>
+
+                        <ul class="skillBox skillList">
+                            <p id="skillsTitle">TOOLS</p>
+                            <li class="profileSkill"> GIT </li>
+                            <li class="profileSkill"> JIRA </li>
+                            <li class="profileSkill"> CMAKE </li>
+                            <li class="profileSkill"> MAKEFILE </li>
+                        </ul>
+
+                    </section>
                 </section>
                 
-                <p  id="profileDescription">
-                    My name's Alec, I'm a recent <a href="https://www.ucf.edu/">UCF</a> graduate with a shiny new bachelor's in Computer Science. 
-                    I'm an ambitious software engineer looking for professional opportunities to strengthen my talent.
-                    Problem solving and creativity are my biggest strengths, and let me excel when developing software.
-                    Currently I have a couple projects under my belt that I am very proud of. 
-                    Throughout their development, I have learned much about planning, dilligence, teamwork and the importance of employing creative solutions.
-                    You can read about and view them below.
-                    I look forward to participating in many more projects in the future.
-                </p>
             </article>
 
-            <section id="projectsContent" class="content" data-title="PROJECTS" data-width="clamp(0px, 90vw, 780px)">
+            <section id="projectsContent" class="content" data-title="PROJECTS" data-width="clamp(0px, 90vw, 1200px)">
                 <article class="projectCard container">
                     <div class="projectTitle">
                         <img src="assets/icons/prism.png" class="projectIcon">
                         <h3>PRISM - SHADER SANDBOX</h3>
+                        <a href="https://github.com/alecbkr/shader-sandbox" class="projectLink">
+                            <div class="projectLinkIcon"></div>
+                        </a>
                     </div>
 
                     <div class="imageShowcase container">
@@ -111,12 +165,20 @@
 
                     <div class="projectDescription">
                         <p>
-                            A shader development environment built on a custom OpenGL rendering engine. 
+                            A GLSL shader development environment built on a custom OpenGL rendering engine. <br> <br>
+                            
+                            Prism is a shader development environment that abstracts rendering and resource 
+                            management while preserving direct access to OpenGL's programmable pipeline.
+                             
+                            It integrates a real-time 3D viewport, code editor, console, and asset management 
+                            tools into a unified workflow.
+
+                            <!-- A shader development environment built on a custom OpenGL rendering engine. 
                             Prism abstracts rendering and resource management while maintaining direct 
                             access to OpenGL's programmable pipeline. This streamlines the process of 
                             writing, testing, and debugging GLSL shader programs 
                             through a unified interface that combines a real-time 3D viewport, code editor, console, 
-                            and asset manager/importer.
+                            and asset manager/importer. -->
 
                             <!-- A shader development environment built on a custom OpenGL rendering engine. 
                             Prism streamlines the process of writing, testing, and debugging GLSL shader programs 
@@ -137,6 +199,9 @@
                     <div class="projectTitle">
                         <img src="assets/icons/simpletonchess.png" class="projectIcon">
                         <h3>SIMPLETON CHESS</h3>
+                        <a href="https://github.com/alecbkr/simpleton_chess" class="projectLink">
+                            <div class="projectLinkIcon"></div>
+                        </a>
                     </div>
 
                     <div class="imageShowcase container">
@@ -154,6 +219,12 @@
                         The game draws a custom ASCII board, enforces the rules of chess through legal 
                         move checking, and improves player interaction with visual indicators that highlight 
                         every valid move available to the selected piece.
+
+                        <!-- Simpleton Chess is a lightweight console chess game that demonstrates efficient 
+                        game-state management and move validation in a text-based environment. 
+                        The game draws a custom ASCII board, enforces the rules of chess through legal 
+                        move checking, and improves player interaction with visual indicators that highlight 
+                        every valid move available to the selected piece. -->
                     </p>
                     
                 </article>
@@ -161,7 +232,10 @@
                 <article class="projectCard container">
                     <div class="projectTitle">
                         <img src="assets/icons/shuzzy.png" class="projectIcon">
-                        <h3>SHUZZY+</h3>
+                        <h3>SHUZZY</h3>
+                        <a href="https://github.com/nfourari/Shuzzy" class="projectLink">
+                            <div class="projectLinkIcon"></div>
+                        </a>
                     </div>
 
                     <div class="imageShowcase container">
@@ -171,6 +245,15 @@
                         </div>
                         <div class="imageSelector"></div>
                     </div>
+
+                    <p class="projectDescription">
+                        A web-based fishing companion that combines catch tracking with social features centered 
+                        around user-shared fishing achievements. Google Maps is integrated and enhanced with information
+                        about reported catches in local bodies of water. Users can log and 
+                        track their catches over time while exploring the achievements and experiences of other 
+                        local anglers.
+                    </p>
+
                 </article>
 
                 <div class="imageInspector">
