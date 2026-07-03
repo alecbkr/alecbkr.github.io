@@ -1,7 +1,10 @@
 .hotbarContainer {
+    display: flex;
+    justify-content: center;
     flex: 1;
     /* position: sticky; */
     /* background-color: yellow; */
+    min-height: 80px;
 }
 
 .hotbar {
@@ -86,4 +89,15 @@
     margin: 0;
 
     z-index: 1;
+}
+
+
+#hotbarAnchor {
+    position: absolute;
+    transform: translate(-50%, 80px);
+    left: 50%;
+
+    /* background-color: yellow; */
+    width: 100px;
+    height: 1px;
 }

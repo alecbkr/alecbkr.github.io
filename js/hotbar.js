@@ -14,5 +14,5 @@ export function initHotbar() {
         }
     });
 
-    observer.observe(hotbarContainer);
+    observer.observe(hotbarAnchor);
 }

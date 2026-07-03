@@ -1,0 +1,47 @@
+.notificationBanner {
+    display: none;
+    position: fixed;
+    right: 10px; bottom: 20px;
+    
+    width: 20vw;
+    height: 60px;   
+
+    background-color: grey;
+
+    animation: slideNotification 4s ease-in-out forwards;
+    z-index: 999;
+}
+
+.notificationBanner.show {
+    display: block;
+}
+
+@keyframes slideNotification {
+    0% {
+        transform: translateY(-150%);
+    }
+
+    5% {
+        transform: translateY(0);
+    }
+
+    90% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(150%);
+    }
+}
+
+#bannerFail {
+    background-color: red;
+    --lightBorder: rgb(255, 152, 152);
+    --ambientBorder: rgb(78, 0, 0);
+}
+
+#bannerSuccess {
+    background-color: green;
+    --lightBorder: rgb(126, 202, 126);
+    --ambientBorder: rgb(0, 67, 0);
+}

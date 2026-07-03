@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="css/content.css">
         <link rel="stylesheet" href="css/profileContent.css">
         <link rel="stylesheet" href="css/hotbar.css">
+        <link rel="stylesheet" href="css/notificationBanner.css">
         
         <script type="module" src="js/main.js" defer></script>
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -165,30 +166,14 @@
 
                     <div class="projectDescription">
                         <p>
-                            A GLSL shader development environment built on a custom OpenGL rendering engine. <br> <br>
-                            
-                            Prism is a shader development environment that abstracts rendering and resource 
-                            management while preserving direct access to OpenGL's programmable pipeline.
-                             
+                            A GLSL shader development environment built from scratch using a custom 
+                            OpenGL-based engine. <br><br>
+
+                            Prism provides a user-friendly 3D workflow by abstracting low-level rendering and
+                            resource management while preserving direct access to OpenGL's programmable pipeline.
+
                             It integrates a real-time 3D viewport, code editor, console, and asset management 
                             tools into a unified workflow.
-
-                            <!-- A shader development environment built on a custom OpenGL rendering engine. 
-                            Prism abstracts rendering and resource management while maintaining direct 
-                            access to OpenGL's programmable pipeline. This streamlines the process of 
-                            writing, testing, and debugging GLSL shader programs 
-                            through a unified interface that combines a real-time 3D viewport, code editor, console, 
-                            and asset manager/importer. -->
-
-                            <!-- A shader development environment built on a custom OpenGL rendering engine. 
-                            Prism streamlines the process of writing, testing, and debugging GLSL shader programs 
-                            through a unified interface that combines a real-time 3D viewport, code editor, console, 
-                            and asset inspector. -->
-
-                            <!-- The underlying engine abstracts rendering and resource management while maintaining direct 
-                            access to OpenGL's programmable pipeline. Users can import models and textures, modify 
-                            shader code, and immediately observe the results in real time, accelerating the development 
-                            and iteration of custom rendering techniques. -->
                             
                         </p>
                     </div>
@@ -214,17 +199,13 @@
                     </div>
                         
                     <p class="projectDescription">
-                        Simpleton Chess is a lightweight console chess game that demonstrates efficient 
-                        game-state management and move validation in a text-based environment. 
-                        The game draws a custom ASCII board, enforces the rules of chess through legal 
+                        A lightweight console chess game that demonstrates efficient 
+                        game-state management and move validation in a text-based environment. <br><br>
+
+                        Simpleton Chess draws a custom ASCII board, enforces the rules of chess through legal 
                         move checking, and improves player interaction with visual indicators that highlight 
                         every valid move available to the selected piece.
 
-                        <!-- Simpleton Chess is a lightweight console chess game that demonstrates efficient 
-                        game-state management and move validation in a text-based environment. 
-                        The game draws a custom ASCII board, enforces the rules of chess through legal 
-                        move checking, and improves player interaction with visual indicators that highlight 
-                        every valid move available to the selected piece. -->
                     </p>
                     
                 </article>
@@ -248,7 +229,9 @@
 
                     <p class="projectDescription">
                         A web-based fishing companion that combines catch tracking with social features centered 
-                        around user-shared fishing achievements. Google Maps is integrated and enhanced with information
+                        around user-shared fishing achievements. <br><br>
+                        
+                        Google Maps integration is enhanced with information
                         about reported catches in local bodies of water. Users can log and 
                         track their catches over time while exploring the achievements and experiences of other 
                         local anglers.
@@ -273,7 +256,7 @@
                     <label for="message">MESSAGE</label>
                     <textarea id="message" name="message" rows="7" maxlength="300"></textarea>
 
-                    <button type="submit" class="button">SEND</button>
+                    <button type="submit" id="sendMessageButton" class="button">SEND</button>
                 </form>
             </section>
         </section>
@@ -309,7 +292,15 @@
                     <p class="linkTitle"> CONTACT </p>
                 </div>
             </div>
+
+            <div id="hotbarAnchor"></div>
+            
         </section>
+
+        <div class="notificationBanner container">
+            <p id="msg"></p>
+        </div>
+        
 
         <footer>
             <p>Copyright &#169 2026 Alec Baker</p>

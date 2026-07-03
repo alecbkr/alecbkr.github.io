@@ -1,3 +1,5 @@
+import {sendNotification} from "./notificationBanner.js"
+
 const allContent = document.querySelectorAll(".content");
 const contentSection = document.querySelector("#contentSection");
 const contentContainer = document.querySelector("#contentContainer");
@@ -120,10 +122,36 @@ function initProfile() {
     });
 }
 
+function initContact() {
+    const form = document.querySelector(".contactForm");
+    form.addEventListener("submit", async (event) => {
+        // form.reset();
+
+        event.preventDefault();
+
+        const response = await fetch("https://formspree.io/f/mdavaggz", {
+            method: "POST",
+            body: new FormData(form),
+            headers: {"Accept": "application/json"}
+        })
+
+        if (response.ok) {
+            form.reset();
+            openContent("profileContent");
+            sendNotification("Message sent! Thanks", "bannerSuccess");
+        }
+        else {
+            sendNotification("Message not sent", "bannerFail");
+        }
+    })
+
+}
+
 
 export function initContent() {
     initProfile();
     initImageShowcases();
+    initContact();
 }
 
 
