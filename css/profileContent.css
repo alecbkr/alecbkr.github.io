@@ -21,6 +21,8 @@
     margin-left: clamp(0px, 1vw, 60px);
 }
 
+
+
 .bold {
     font-weight: 600;
 }
@@ -46,6 +48,18 @@
     margin-right: clamp(0px, 2vw, 100px);
     margin-left: 20px;
     /* margin-top: 5px; */
+}
+
+@media (max-width: 378px) {
+    #profileIntro {
+        /* margin-right: 50px;
+        background-color: yellow; */
+    }
+
+    #profilePic {
+        --size: 130px;
+        margin-top: 20px;
+    }
 }
 
 #skillsContainer {
