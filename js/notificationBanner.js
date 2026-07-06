@@ -1,4 +1,5 @@
 const notificationBanner = document.querySelector(".notificationBanner");
+let active = false;
 
 export function initNotificationBanner() {
     // notificationBanner.

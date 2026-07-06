@@ -17,7 +17,8 @@
     font-size: 35px;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
+    margin-left: clamp(0px, 1vw, 60px);
 }
 
 .bold {
@@ -41,7 +42,8 @@
     border-radius: 4px;
     width: var(--size); height: var(--size);
     float: right;
-    margin-right: 20px;
+    /* margin-right: 20px; */
+    margin-right: clamp(0px, 2vw, 100px);
     margin-left: 20px;
     /* margin-top: 5px; */
 }
@@ -68,9 +70,10 @@
     
 }
 
-@media (max-width: 800px) {
-    .grid {
+@media (max-width: 400px) {
+    #profileSkills {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 }
 
