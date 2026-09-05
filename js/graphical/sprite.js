@@ -1,5 +1,5 @@
-import {speak} from "./speak.js"
-import {openContent} from "./content.js"
+import {speak} from "../functionality/speak.js"
+import {openContent} from "../content/content.js"
 
 const hoverableAnchors = document.querySelectorAll(".hoverable");
 const clickableAnchors = document.querySelectorAll(".clickable");

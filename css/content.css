@@ -2,14 +2,10 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    /* margin-left: 15vw;
-    margin-right: 15vw; */
+    
     margin: 70px auto 30px auto;
     width: clamp(0px, 90vw, 780px);
     padding: 10px 10px 10px 10px;
-
-    /* overflow: hidden; */
-
 }
 
 #contentTitle {
@@ -39,8 +35,7 @@
 }
 
 #projectsContent.active {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(355px, 1fr));
+    display: flex;
     gap: 10px;
 }
 
@@ -61,45 +56,8 @@
     
 }
 
-.projectCard {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
 
 
-    /* background: linear-gradient(
-        to bottom,
-        var(--backgroundSecondary),
-        var(--ambientPrimary)
-    ) */
-    /* background-color: rgb(26, 0, 0); */
-}
-
-.projectIcon {
-    --projectIconSize: 30px;
-
-    width: var(--projectIconSize);
-    height: var(--projectIconSize);
-}
-
-.projectTitle {
-    position: relative;
-    display: flex;
-    gap: 5px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    width: 100%;
-
-    background-color: var(--ambientSecondary);
-}
-
-.projectLink {
-    display: flex;
-    align-items: center;
-    /* background-color: yellow; */
-    margin-left: auto;
-}
 
 
 .projectLinkIcon {
@@ -119,16 +77,6 @@
     background-color: var(--lightPrimary);
 }
 
-.imageShowcase {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    width: 95%;
-    border-right: 0; border-left: 0; border-top: 0;
-
-}
 
 .showcaseImage {
     display: none;
@@ -144,12 +92,6 @@
     
 }
 
-.imageViewport {
-    width: 350px;
-    height: 220px;
-    overflow: hidden;
-    background-color: var(--backgroundPrimary);
-}
 
 .imageViewport img {
     width: 100%;

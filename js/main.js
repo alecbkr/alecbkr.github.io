@@ -1,7 +1,8 @@
-import {initSprites} from "./sprite.js"
-import {setDialogue, speak} from "./speak.js";
-import {initContent, landOnContent} from "./content.js";
-import {initHotbar} from "./hotbar.js";
+import {initSprites} from "./graphical/sprite.js"
+import {setDialogue, speak} from "./functionality/speak.js";
+import {initContent, landOnContent} from "./content/content.js";
+import {initHotbar} from "./gui/hotbar.js";
+// import { initWebGL } from "./webGl.js";
 
 const batTextbox = document.querySelector(".textbox");
 
@@ -15,6 +16,8 @@ async function startup() {
     initContent();
     initHotbar();
     landOnContent();
+    // initWebGL();
+
     
 }
 

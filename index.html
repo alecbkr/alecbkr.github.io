@@ -9,15 +9,23 @@
         <link rel="stylesheet" href="css/title.css">
         <link rel="stylesheet" href="css/content.css">
         <link rel="stylesheet" href="css/profileContent.css">
+        <link rel="stylesheet" href="css/projectsContent.css">
         <link rel="stylesheet" href="css/hotbar.css">
         <link rel="stylesheet" href="css/notificationBanner.css">
         
         <script type="module" src="js/main.js" defer></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"
+            integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ=="
+            crossorigin="anonymous"
+            defer>
+        </script>
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
+        <!-- <canvas id="glCanvas"></canvas> -->
 
         <section id="titleContainer" class="container">
 
@@ -145,9 +153,32 @@
                 
             </article>
 
-            <section id="projectsContent" class="content" data-title="PROJECTS" data-width="clamp(0px, 90vw, 1200px)">
-                <article class="projectCard container">
-                    <div class="projectTitle">
+
+            <section id="projectsContent" class="content" data-title="PROJECTS" data-width="clamp(0px, 90vw, 950px)">
+                <ul id="projectSelectMenu">
+                    <li>
+                        <a href="#prism" class="projectSelectLink">
+                            <img src="assets/icons/prism.png" class="projectIcon">
+                            Prism
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#simpletonchess" class="projectSelectLink">
+                            <img src="assets/icons/simpletonchess.png" class="projectIcon">
+                            Simpleton Chess
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#shuzzy" class="projectSelectLink">
+                            <img src="assets/icons/shuzzy.png" class="projectIcon">
+                            Shuzzy
+                        </a>
+                    </li>
+                </ul>
+
+                    
+                <article id="prism" class="projectPageContent" data-title="\PRISM">
+                    <div class="projectHeader">
                         <img src="assets/icons/prism.png" class="projectIcon">
                         <h3>PRISM - SHADER SANDBOX</h3>
                         <a href="https://github.com/alecbkr/shader-sandbox" class="projectLink">
@@ -155,16 +186,15 @@
                         </a>
                     </div>
 
-                    <div class="imageShowcase container">
-                        <div class="imageViewport container">
-                            <img src="assets/project images/prism/prism-demo1.gif" class="showcaseImage">
-                            <img src="assets/project images/prism/prism-demo2.png" class="showcaseImage">
-                            <img src="assets/project images/prism/prism-demo3.png" class="showcaseImage">
+                    <section class="projectAbout">
+                        <div class="imageShowcase">
+                            <div class="imageViewport container">
+                                <img src="assets/project images/prism/prism-demo1.gif" class="showcaseImage">
+                                <img src="assets/project images/prism/prism-demo2.png" class="showcaseImage">
+                                <img src="assets/project images/prism/prism-demo3.png" class="showcaseImage">
+                            </div>
+                            <div class="imageSelector"></div>
                         </div>
-                        <div class="imageSelector"></div>
-                    </div>
-
-                    <div class="projectDescription">
                         <p>
                             A GLSL shader development environment built from scratch using a custom 
                             OpenGL-based engine. <br><br>
@@ -173,70 +203,73 @@
                             resource management while preserving direct access to OpenGL's programmable pipeline.
 
                             It integrates a real-time 3D viewport, code editor, console, and asset management 
-                            tools into a unified workflow.
+                            tools into a unified workflow. 
                             
                         </p>
-                    </div>
-                    
+                        
+                    </section>
                 </article>
 
-                <article class="projectCard container">
-                    <div class="projectTitle">
+
+                <article id="simpletonchess" class="projectPageContent active">
+                    <div class="projectHeader">
                         <img src="assets/icons/simpletonchess.png" class="projectIcon">
                         <h3>SIMPLETON CHESS</h3>
-                        <a href="https://github.com/alecbkr/simpleton_chess" class="projectLink">
+                        <a href="https://github.com/alecbkr/shader-sandbox" class="projectLink">
                             <div class="projectLinkIcon"></div>
                         </a>
                     </div>
 
-                    <div class="imageShowcase container">
-                        <div class="imageViewport container">
-                            <img src="assets/project images/chess/chess-demo1.gif" class="showcaseImage">
-                            <img src="assets/project images/chess/chess-demo2.png" class="showcaseImage">
-                            <img src="assets/project images/chess/chess-demo3.png" class="showcaseImage">
+                    <section class="projectAbout">
+                        <div class="imageShowcase">
+                            <div class="imageViewport container">
+                                <img src="assets/project images/chess/chess-demo1.gif" class="showcaseImage">
+                                <img src="assets/project images/chess/chess-demo2.png" class="showcaseImage">
+                                <img src="assets/project images/chess/chess-demo3.png" class="showcaseImage">
+                            </div>
+                            <div class="imageSelector"></div>
                         </div>
-                        <div class="imageSelector"></div>
-                    </div>
+                        <p>
+                            A lightweight console chess game that demonstrates efficient 
+                            game-state management and move validation in a text-based environment. <br><br>
+
+                            Simpleton Chess draws a custom ASCII board, enforces the rules of chess through legal 
+                            move checking, and improves player interaction with visual indicators that highlight 
+                            every valid move available to the selected piece.
+                        </p>
                         
-                    <p class="projectDescription">
-                        A lightweight console chess game that demonstrates efficient 
-                        game-state management and move validation in a text-based environment. <br><br>
-
-                        Simpleton Chess draws a custom ASCII board, enforces the rules of chess through legal 
-                        move checking, and improves player interaction with visual indicators that highlight 
-                        every valid move available to the selected piece.
-
-                    </p>
-                    
+                    </section>
                 </article>
+                
 
-                <article class="projectCard container">
-                    <div class="projectTitle">
+                <article id="shuzzy" class="projectPageContent">
+                    <div class="projectHeader">
                         <img src="assets/icons/shuzzy.png" class="projectIcon">
                         <h3>SHUZZY</h3>
-                        <a href="https://github.com/nfourari/Shuzzy" class="projectLink">
+                        <a href="https://github.com/alecbkr/shader-sandbox" class="projectLink">
                             <div class="projectLinkIcon"></div>
                         </a>
                     </div>
 
-                    <div class="imageShowcase container">
-                        <div class="imageViewport container">
-                            <img src="assets/project images/shuzzy/shuzzy-demo2.png" class="showcaseImage">
-                            <img src="assets/project images/shuzzy/shuzzy-demo1.png" class="showcaseImage">
+                    <section class="projectAbout">
+                        <div class="imageShowcase">
+                            <div class="imageViewport container">
+                                <img src="assets/project images/shuzzy/shuzzy-demo2.png" class="showcaseImage">
+                                <img src="assets/project images/shuzzy/shuzzy-demo1.png" class="showcaseImage">
+                            </div>
+                            <div class="imageSelector"></div>
                         </div>
-                        <div class="imageSelector"></div>
-                    </div>
-
-                    <p class="projectDescription">
-                        A web-based fishing companion that combines catch tracking with social features centered 
-                        around user-shared fishing achievements. <br><br>
+                        <p>
+                            A web-based fishing companion that combines catch tracking with social features centered 
+                            around user-shared fishing achievements. <br><br>
+                            
+                            Google Maps integration is enhanced with information
+                            about reported catches in local bodies of water. Users can log and 
+                            track their catches over time while exploring the achievements and experiences of other 
+                            local anglers.
+                        </p>
                         
-                        Google Maps integration is enhanced with information
-                        about reported catches in local bodies of water. Users can log and 
-                        track their catches over time while exploring the achievements and experiences of other 
-                        local anglers.
-                    </p>
-
+                    </section>
                 </article>
 
                 <div class="imageInspector">

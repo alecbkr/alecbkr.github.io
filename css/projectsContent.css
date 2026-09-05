@@ -1,0 +1,99 @@
+#projectSelectMenu {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: -10px 0 -10px -10px;
+    
+    list-style: none;
+    padding: 3px;
+    gap: 3px;
+    /* border-radius: 2px; */
+    background-color: var(--backgroundPrimary);
+    overflow: hidden;
+}
+
+
+.projectSelectLink {
+    display: flex;
+    /* width: 97%;    */
+    padding: 2px 0px 2px 2px;
+    gap: 5px;
+    align-items: center;
+
+    font-size: 20px;
+    color: var(--textColorPrimary);
+    background-color: var(--ambientSecondary);
+    text-decoration: none;
+    border-radius: 2px;
+    
+    transition: background-color 0.2s ease;
+    --projectIconSize: 30px;
+}
+
+.projectSelectLink:hover {
+    background-color: var(--ambientPrimary);
+}
+
+.projectSelectLink.active {
+    background-color: var(--lightPrimary);
+}
+
+.projectIcon {
+    width: var(--projectIconSize);
+    height: var(--projectIconSize);
+}
+
+.projectPageContent {
+    display: none;
+}
+
+
+.projectPageContent.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 5px 10px 5px 10px;
+    
+
+    --projectIconSize: 45px;
+}
+
+
+.projectHeader {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+.projectAbout {
+    width: 100%;
+    font-size: 18px;
+}
+
+.imageShowcase {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-right: 20px;
+    /* background-color: yellow; */
+}
+
+.imageViewport {
+    width: 330px;
+    height: 200px;
+    overflow: hidden;
+    background-color: var(--backgroundPrimary);
+}
+
+.imageSelector {
+    display: flex;
+    justify-content: center;
+    height: 5px;
+}
