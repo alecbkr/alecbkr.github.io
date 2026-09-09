@@ -167,9 +167,7 @@
 
 @media (max-width: 500px) {
     #bat {
-        /* width: 85px;
-        height: 60px; */
-        --baseScale: .20;
+        display: none;
     }
 }
 
