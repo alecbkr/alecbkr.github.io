@@ -6,6 +6,7 @@
     margin: 70px auto 30px auto;
     width: clamp(0px, 90vw, 780px);
     padding: 10px 10px 10px 10px;
+    /* background-color: yellow; */
 }
 
 #contentTitle {
@@ -42,6 +43,7 @@
 @media (max-width: 800px) {
     #projectsContent.active {
         flex-direction: column;
+        
     }
 }
 

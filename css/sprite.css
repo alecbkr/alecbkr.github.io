@@ -165,6 +165,14 @@
     --loop: infinite;
 }
 
+@media (max-width: 500px) {
+    #bat {
+        /* width: 85px;
+        height: 60px; */
+        --baseScale: .20;
+    }
+}
+
 #spriteAnchor_bat {
     display: inline-block;
     width: 68px;
