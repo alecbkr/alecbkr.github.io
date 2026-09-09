@@ -9,6 +9,7 @@
     align-items: center;
     width: fit-content;
     margin: 5vh auto;
+    margin-top: 50px;
 
     /* transform: scale(clamp(1%, 12%, 10%)); */
 }

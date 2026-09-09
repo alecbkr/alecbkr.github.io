@@ -5,6 +5,7 @@
     /* position: sticky; */
     /* background-color: yellow; */
     min-height: 80px;
+    margin-top: 30px;
 
     -webkit-user-select: none; /* Chrome, Safari */
     -moz-user-select: none;    /* Firefox */
@@ -20,7 +21,7 @@
     justify-content: center;
     align-items: center;
 
-    gap: 10vw;
+    gap: 8vw;
     /* margin: 0; */
     /* bottom: 0; left: 50%;
     transform: translateX(-50%); */
@@ -43,7 +44,7 @@
     padding: 10px 10px 10px 10px;
 
     line-height: 0;
-    --midSegmentWidth: clamp(300px, 40vw, 800px);
+    --midSegmentWidth: clamp(300px, 35vw, 800px);
 }
 
 #platform.img {
