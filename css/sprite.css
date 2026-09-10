@@ -165,11 +165,7 @@
     --loop: infinite;
 }
 
-@media (max-width: 500px) {
-    #bat {
-        display: none;
-    }
-}
+
 
 #spriteAnchor_bat {
     display: inline-block;
@@ -181,4 +177,14 @@
     left: 100%; 
     top: 5%;
     /* background-color: orange; */
+}
+
+@media (max-width: 500px) {
+    #bat {
+        display: none;
+    }
+
+    #spriteAchor_bat {
+        display: none;
+    }
 }

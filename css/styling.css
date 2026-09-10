@@ -116,6 +116,7 @@ input:focus, textarea:focus {
     background-color: whitesmoke;
     white-space: nowrap;
     font-family: monospace;
+    /* overflow: hidden; */
 
     padding: 5px 5px 5px 5px;
     border-radius: 2px;
