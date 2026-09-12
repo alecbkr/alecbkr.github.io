@@ -62,7 +62,7 @@
     height: 60px;
 }
 
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
     #platformSide {
         width: 20px;
         height: 40px;
@@ -71,7 +71,7 @@
         height: 40px;
         width: 200px;
     }
-}
+} */
 
 #platBackdrop {
     position: absolute;
