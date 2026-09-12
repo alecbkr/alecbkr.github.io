@@ -1,7 +1,7 @@
 .hotbarContainer {
     display: flex;
     justify-content: center;
-    flex: 1;
+    /* flex: 1; */
     /* position: sticky; */
     /* background-color: yellow; */
     min-height: 80px;

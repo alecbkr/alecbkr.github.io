@@ -19,7 +19,7 @@ export function openContent(contentId) {
 
         contentContainer.style.width = selectedContent.dataset.width;
         contentTitle.textContent = selectedContent.dataset.title;
-        window.location.hash = contentId;
+        history.pushState(null, "", `${contentId}`);
     }
 }
 

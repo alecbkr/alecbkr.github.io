@@ -53,15 +53,15 @@
 }
 
 .projectSelectLink:hover {
-    background-color: var(--ambientPrimary);
-    --lightBorder: rgb(187, 44, 44);
-    --ambientBorder: rgb(72, 0, 0);
+    background-color: var(--accentColorSecondary);
+    --lightBorder: var(--hoverBorderLight);
+    --ambientBorder: var(--hoverBorderAmbient);
 }
 
 .projectSelectLink.active {
-    background-color: var(--lightPrimary);
-    --lightBorder: rgb(255, 135, 135);
-    --ambientBorder: rgb(135, 0, 0);
+    background-color: var(--accentColorPrimary);
+    --lightBorder: var(--selectedBorderLight);
+    --ambientBorder: var(--selectedBorderAmbient);
 }
 
 .projectIcon {

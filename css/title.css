@@ -10,7 +10,7 @@
     width: fit-content;
     margin: 5vh auto;
     margin-top: 50px;
-
+    user-select: none;
     /* transform: scale(clamp(1%, 12%, 10%)); */
 }
 
@@ -88,11 +88,11 @@
 }
 
 .socialItem:hover {
-    background-color: rgb(255, 40, 40);
-    border-top-color: rgb(255, 80, 80);
-    border-right-color: rgb(255, 80, 80);
-    border-left-color: rgb(201, 32, 32);
-    border-bottom-color: rgb(201, 32, 32);
+    background-color: var(--accentColorPrimary);
+    border-top-color: var(--selectedBorderLight);
+    border-right-color: var(--selectedBorderLight);
+    border-left-color: var(--selectedBorderAmbient);
+    border-bottom-color: var(--selectedBorderAmbient);
 }
 
 .linkIcon {
