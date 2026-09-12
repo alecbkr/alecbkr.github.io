@@ -6,20 +6,20 @@ const allContent = document.querySelectorAll(".content");
 const contentTitle = document.querySelector("#contentSection");
 const contentContainer = document.querySelector("#contentContainer");
 
-export function openContent(id) {
-    
-    const selectedContent = [...allContent].find(el => el.id === id);
+export function openContent(contentId) {
+
+    const selectedContent = document.querySelector(contentId + ".content");
+
     if (selectedContent) {
         allContent.forEach((content) => {
             content.classList.remove("active");
         })
+
         selectedContent.classList.add("active");
+
         contentContainer.style.width = selectedContent.dataset.width;
         contentTitle.textContent = selectedContent.dataset.title;
-
-        const contentId = selectedContent.id;
-        const sectionName = contentId.replace("Content", "");
-        window.location.hash = sectionName;
+        window.location.hash = contentId;
     }
 }
 
@@ -30,18 +30,18 @@ export function landOnContent() {
 
     switch (contentString) {
         case "projects":
-            openContent("projectsContent");
-            document.querySelector("#spriteAnchor_chest").classList.add("active");
+            openContent("#projects");
+            // document.querySelector("#spriteAnchor_chest").classList.add("active");
             break;
         
         case "contact":
-            openContent("contactContent");
-            document.querySelector("#spriteAnchor_email").classList.add("active");
+            openContent("#contact");
+            // document.querySelector("#spriteAnchor_email").classList.add("active");
             break;
         
         default:
-            openContent("profileContent");
-            document.querySelector("#spriteAnchor_profile").classList.add("active");
+            openContent("#profile");
+            // document.querySelector("#spriteAnchor_profile").classList.add("active");
     }
 }
 

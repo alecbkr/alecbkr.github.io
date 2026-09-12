@@ -57,11 +57,10 @@ function initImageShowcases() {
     })
 }
 
-function openProject(projectLink) {
-
-    const projectId = projectLink.getAttribute("href");
-    const selectedProject = document.querySelector(projectId);
-    if (selectedProject) {
+function openProject(projectId) {
+    const selectedProjectElements = document.querySelectorAll('#' + projectId);
+    
+    if (selectedProjectElements) {
         allProjects.forEach((project) => {
             project.classList.remove("active");
         })
@@ -70,8 +69,9 @@ function openProject(projectLink) {
             link.classList.remove("active");
         })
 
-        selectedProject.classList.add("active");
-        projectLink.classList.add("active");
+        selectedProjectElements.forEach((element) => {
+            element.classList.add("active");
+        })
     }
 }
 
@@ -81,9 +81,12 @@ export function initProjects() {
     allLinks.forEach((projectLink) => {
         projectLink.addEventListener("click", (event) => {
             event.preventDefault();
-            openProject(projectLink);
+            openProject(projectLink.id);
         });
     });
+
+    //set default active project
+    openProject("prism");
 
     initImageShowcases();
 }

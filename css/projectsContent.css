@@ -19,7 +19,6 @@
         width: 100%;
         margin: -10px 0px -10px -10px;
         padding-right: 17px;
-        
     }
 }
 
@@ -40,16 +39,21 @@
     /* --lightBorder: red; */
     --ambientBorder: rgb(40, 40, 40);
     text-decoration: none;
-    border-radius: 2px;
     
-    transition: background-color 0.2s ease;
+    transition: 
+        background-color 0.2s ease,
+        border-right-color 0.2s ease,
+        border-top-color 0.2s ease,
+        border-left-color  0.2s ease,
+        border-bottom-color  0.2s ease;
+
     --projectIconSize: 30px;
 }
 
 .projectSelectLink:hover {
     background-color: var(--ambientPrimary);
-    --lightBorder: var(--ambientPrimary);
-    --ambientBorder: var(--ambientPrimary);
+    --lightBorder: rgb(187, 44, 44);
+    --ambientBorder: rgb(72, 0, 0);
 }
 
 .projectSelectLink.active {

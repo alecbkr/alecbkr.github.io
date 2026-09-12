@@ -1,22 +1,30 @@
 {
     "greeting": [
-        "Welcome!",
-        "Hello!",
-        "How's it goin?"
+        "Welcome",
+        "Salutations",
+        "Greetings",
+        "How's it goin",
+        "What it do"
     ],
     
 
     "chatter": [
-        "Ow! jk.",
-        "Working very hard over here.",
-        "Bring any snacks?",
-        "I could use a nap.",
-        "Small talk isn't really my thing.",
-        "Wanna hear a joke? Wait, I forgot.",
-        "It ain't much, but it's home.",
+        "..!",
+        "Ouch.. jk",
+        "Working very hard over here, I assure you",
+        "I could use a nap",
         "True generosity!",
-        "Immaculate vibes.",
-        "I'm beginning to feel very popular.",
-        "Perplexing..."
+        "Immaculate vibes",
+        "Man, what a drag",
+        "Perplexing...",
+        "I hold sacred wisdom, surely you believe me?",
+        "Believe it!",
+        "Sometimes I be computin",
+        "Complementary refreshments not included",
+        "You love it here. Say you love it",
+        "My starting salary is 20 breadcrumbs",
+        "IfYouCanReadAllOfThisBeforeItDisappearsYouOweMeFiveDollars",
+        "lul",
+        "What if I told you... ahh nvm"
     ]
 }

@@ -4,7 +4,7 @@ import {initContent, landOnContent} from "./content/content.js";
 import {initHotbar} from "./gui/hotbar.js";
 // import { initWebGL } from "./webGl.js";
 
-const batTextbox = document.querySelector(".textbox");
+const batTextbox = document.querySelector("#bat.speechbox");
 
 async function startup() {
     const response = await fetch("assets/dialogue.json");

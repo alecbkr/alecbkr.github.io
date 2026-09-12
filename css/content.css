@@ -31,17 +31,21 @@
     display: none;
 }
 
-#contactContent.active{
+#profile.content.active {
     display: block;
 }
 
-#projectsContent.active {
+#contact.content.active{
+    display: block;
+}
+
+#projects.content.active {
     display: flex;
     gap: 10px;
 }
 
 @media (max-width: 800px) {
-    #projectsContent.active {
+    #projects.active {
         flex-direction: column;
         
     }

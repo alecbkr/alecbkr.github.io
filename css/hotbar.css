@@ -11,24 +11,20 @@
     -moz-user-select: none;    /* Firefox */
     -ms-user-select: none;     /* Older Edge */
     user-select: none;
+
 }
 
 .hotbar {
-    /* position: absolute; */
     position: relative; 
-    /* position: fixed; */
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 
-    gap: 8vw;
-    /* margin: 0; */
-    /* bottom: 0; left: 50%;
-    transform: translateX(-50%); */
-
+    gap: 35px;
     bottom: 0;
     left: 0;
     right: 0;
+    margin-bottom: 40px;
 }
 
 .hotbar.fixed {
@@ -41,15 +37,17 @@
     display: flex;
     justify-content: center;
 
-    padding: 10px 10px 10px 10px;
+    /* padding: 10px 10px 10px 10px; */
 
     line-height: 0;
-    --midSegmentWidth: clamp(300px, 35vw, 800px);
+    --midSegmentWidth: 320px;
+
+    bottom: 0;
 }
 
 #platform.img {
     display: block;
-    image-rendering: pixelated;
+    image-rendering: pixelated;;
 }
 
 #platformSide {
@@ -64,6 +62,17 @@
     height: 60px;
 }
 
+@media (max-width: 500px) {
+    #platformSide {
+        width: 20px;
+        height: 40px;
+    }
+    #platformMid {
+        height: 40px;
+        width: 200px;
+    }
+}
+
 #platBackdrop {
     position: absolute;
     width: var(--midSegmentWidth);
@@ -76,8 +85,8 @@
     padding-left: 5px;
     background: linear-gradient(
         to top,
-    rgba(20, 20, 20, 0.8) 40%,
-    rgba(0, 0, 0, 0.0) 
+        rgb(from var(--backgroundPrimary) r g b / 80%) 40%,
+        transparent
     );
     
 }

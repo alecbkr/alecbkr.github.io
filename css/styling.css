@@ -1,5 +1,5 @@
 :root {
-    --backgroundPrimary: rgb(20, 20, 20);
+    --backgroundPrimary: rgb(16, 16, 16);
     --backgroundSecondary: rgb(40, 40, 40);
 
     --textColorPrimary: whitesmoke;
@@ -44,8 +44,8 @@ h1 {
     letter-spacing: 2px;
 
     text-shadow:
-        -2px 0px 0 red,
-        -3px 0px 0 rgb(97, 0, 0);
+        -3px 0px 0 red,
+        -5px 0px 0 rgb(97, 0, 0);
 }
 
 h2 {
@@ -111,12 +111,12 @@ input:focus, textarea:focus {
 
 
 
-.textbox {
+.speechbox {
     color: rgb(0, 0, 0);
     background-color: whitesmoke;
     white-space: nowrap;
     font-family: monospace;
-    /* overflow: hidden; */
+    
 
     padding: 5px 5px 5px 5px;
     border-radius: 2px;
@@ -127,7 +127,7 @@ input:focus, textarea:focus {
     position: absolute;
     right: 100%;
     transform-origin: right center;
-    transform: translate(15px, -160px) ;
+    transform: translate(25px, -50px) ;
 }
 
 /* .textbox::after {

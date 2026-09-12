@@ -6,6 +6,7 @@
         <link rel="icon" href="sprites/icon.png">
         <link rel="stylesheet" href="css/styling.css">
         <link rel="stylesheet" href="css/sprite.css">
+        <link rel="stylesheet" href="css/sprites2.css">
         <link rel="stylesheet" href="css/title.css">
         <link rel="stylesheet" href="css/content.css">
         <link rel="stylesheet" href="css/profileContent.css">
@@ -30,10 +31,11 @@
         <section id="titleContainer" class="container">
 
             <h1 class="titleText">ALEC BAKER</h1>
-            <div id="spriteAnchor_bat" class="clickable" data-action="speak">
-                <div id="bat" class="animatedSprite animating"  ></div>
-                <p class="textbox">Welcome!</p>
+            <div id="bat" class="spriteButton" data-action="speak">
+                <div id="bat" class="spriteIcon alwaysAnimating"></div>
+                <span id="bat" class="speechbox">Welcome!</span>
             </div>
+
 
             <p class="subtitle">SOFTWARE ENGINEER</p>
 
@@ -61,7 +63,7 @@
                 <span id="contentPrefix">ALECBKR\</span><span id="contentSection">PROFILE</span>
             </h2>
 
-            <article id="profileContent" class="content" data-title="PROFILE" data-width="clamp(0px, 90vw, 780px)">
+            <article id="profile" class="content" data-title="PROFILE" data-width="clamp(0px, 90vw, 780px)">
 
                 <section id="profileText">
                     <img id="profilePic" class="container" src="assets/pfp.jpg" alt="profilepicture">
@@ -71,21 +73,23 @@
 
                     <p>
                         I'm a <span class="highlight">Software Engineer</span> with a bachelor's degree in 
-                        Computer Science and experience building large, real-time applications. I utilize a 
-                        powerful combination of creativity and logicality
-                        when tackling problems that I set out to solve.
+                        Computer Science and experience building systematic components for large, real-time applications.
+                        I value my ability to problem solve with logicality and forward thinking so that my solutions are 
+                        efficient and malleable for future developments.
+                
                     </p> <br>
 
                     <p>
                         My experience is in building robust back-end systems and tools that demonstrate <span class=highlight>scalability,
-                        flexibility, and efficiency</span>. Some of these include graphical rendering pipelines, resource and asset
+                        flexibility, and efficiency</span>. Some of these include a graphical rendering pipeline, resource and asset
                         management systems, and core engine functionality, such as input handling and application timing systems.
                     </p> <br>
 
                     <p>
-                        I am proficient in <span class="highlight">C and C++</span> and enjoy working with them because of the control they give me
-                        over system resources. My interest in low-level programming has given me a strong understanding 
-                        of foundational computer science concepts that influence the way I design and develop software.
+                        I am most proficient in <span class="highlight">C and C++</span> and enjoy working in them because 
+                        of their explicit nature and access over system resources.
+                        My interest in low-level programming has given me a strong understanding 
+                        of foundational computer science concepts that support the way I design and develop software.
                     </p> <br>
                     
                     <p>
@@ -154,22 +158,22 @@
             </article>
 
 
-            <section id="projectsContent" class="content" data-title="PROJECTS" data-width="clamp(0px, 90vw, 950px)">
+            <section id="projects" class="content" data-title="PROJECTS" data-width="clamp(0px, 90vw, 950px)">
                 <ul id="projectSelectMenu">
                     <li>
-                        <a href="#prism" class="projectSelectLink container">
+                        <a href="#prism" id="prism" class="projectSelectLink container">
                             <img src="assets/icons/prism.png" class="projectIcon">
                             Prism
                         </a>
                     </li>
                     <li>
-                        <a href="#simpletonchess" class="projectSelectLink container">
+                        <a href="#simpletonchess" id="simpletonchess" class="projectSelectLink container">
                             <img src="assets/icons/simpletonchess.png" class="projectIcon">
                             Simpleton Chess
                         </a>
                     </li>
                     <li>
-                        <a href="#shuzzy" class="projectSelectLink container">
+                        <a href="#shuzzy" id="shuzzy" class="projectSelectLink container">
                             <img src="assets/icons/shuzzy.png" class="projectIcon">
                             Shuzzy
                         </a>
@@ -211,7 +215,7 @@
                 </article>
 
 
-                <article id="simpletonchess" class="projectPageContent active">
+                <article id="simpletonchess" class="projectPageContent">
                     <div class="projectHeader">
                         <img src="assets/icons/simpletonchess.png" class="projectIcon">
                         <h3>SIMPLETON CHESS</h3>
@@ -280,7 +284,7 @@
 
             </section>
 
-            <section id="contactContent" class="content" data-title="CONTACT" data-width="clamp(0px, 90vw, 400px)">
+            <section id="contact" class="content" data-title="CONTACT" data-width="clamp(0px, 90vw, 400px)">
                 <form class="contactForm" action="https://formspree.io/f/mdavaggz" method="POST">
                     <label for="name">NAME</label>
                     <input id="name" type="text" name="name" maxlength="50" required>
@@ -293,6 +297,8 @@
                 </form>
             </section>
         </section>
+
+
         
         <section class="hotbarContainer">
             <div class="hotbar">
@@ -304,26 +310,20 @@
                     <div id="platBackdrop"></div>
                 </div>
 
-                <div class="spriteLink">
-                    <div class="clickable hoverable" id="spriteAnchor_profile" data-action="openContent">
-                        <div class="animatedSprite" id="profileSprite"></div>
-                    </div>
-                    <p class="linkTitle"> PROFILE </p>
-                </div>
+                <a href="#profile" class="spriteButton hotbarButton" data-action="openPage" draggable="false">
+                    <div id="profile" class="spriteIcon animateOnHover" ></div>
+                    <span class="buttonTitle">PROFILE</span>
+                </a>
 
-                <div class="spriteLink">
-                    <div class="clickable hoverable" id="spriteAnchor_chest" data-action="openContent">
-                        <div class="animatedSprite" id="chestSprite"></div>
-                    </div>
-                    <p class="linkTitle"> PROJECTS </p>
-                </div>
+                <a href="#projects" class="spriteButton hotbarButton" data-action="openPage" draggable="false">
+                    <div id="projects" class="spriteIcon animateOnHover"></div>
+                    <span class="buttonTitle">PROJECTS</span>
+                </a>
 
-                <div class="spriteLink">
-                    <div class="clickable hoverable" id="spriteAnchor_email" data-action="openContent">
-                        <div class="animatedSprite" id="emailSprite"></div>
-                    </div>
-                    <p class="linkTitle"> CONTACT </p>
-                </div>
+                <a href="#contact" class="spriteButton hotbarButton" data-action="openPage" draggable="false">
+                    <div id="contact" class="spriteIcon animateOnHover"></div>
+                    <span class="buttonTitle">CONTACT</span>
+                </a>
             </div>
 
             <div id="hotbarAnchor"></div>

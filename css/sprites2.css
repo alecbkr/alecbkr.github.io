@@ -1,0 +1,178 @@
+.spriteButton {
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    /* bottom: 0; */
+    width: fit-content;
+    height: fit-content;
+    z-index: 0;
+    /* width: 100px;
+    height: 100px;   */
+    
+    cursor: pointer;
+    /* background-color: yellow; */
+}
+
+.hotbarButton {
+    --buttonSize: 90px;
+    width: var(--buttonSize);
+    height: var(--buttonSize);
+}
+
+/* @media (max-width: 500px) {
+    .hotbarButton {
+        --buttonSize: 50px;
+    }
+
+    .spriteIcon.hotbarButton {
+        
+        background-color: black;
+    
+
+    } 
+} */
+
+
+
+
+.buttonTitle {
+    position: absolute;
+    width: fit-content;
+    margin-top: 120px;
+    background-color: rgb(58, 0, 0);
+    padding: 3px;
+    border: 1px solid black;
+    
+    color: whitesmoke;
+    font-family: system-ui, sans-serif;
+    font-weight: 600;
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+.spriteIcon {
+    z-index: 0;
+}
+
+#bat.spriteButton {
+    position: absolute;
+    right: -88px;
+    top: -10px;
+    width: 70px;
+    height: 70px;
+}
+
+#bat.spriteIcon {
+    background-image: url("../assets/sprites/bat_spritesheet.png");
+    --frameWidth: 170px;
+    --frameHeight: 120px;
+    --sheetWidth: 510px;
+
+    --scale: 0.40;
+    --hoverScaleMultiplier: 1.1;
+    
+    --numFrames: 4;
+    --frameInterval: .40s;
+    --loop: infinite;
+
+    position: absolute;
+}
+
+#profile.spriteIcon {
+    background-image: url("../assets/sprites/profile_spritesheet.png");
+    --frameWidth: 200px;
+    --frameHeight: 200px;
+    --sheetWidth: 600px;
+
+    --scale: 0.35;
+    --hoverScaleMultiplier: 1.2;
+
+    --numFrames: 1;
+    --frameInterval: .30s;
+    --loop: forwards;
+}
+
+#projects.spriteIcon {
+    background-image: url("../assets/sprites/chest_spritesheet.png");
+    --frameWidth: 180px;
+    --frameHeight: 140px;
+    --sheetWidth: 1080px;
+
+    --targetScale: 0.44;
+    --hoverScaleMultiplier: 1.26;
+    --shrinkToFitMultiplier: 0.5;
+    --scale: var(--targetScale);
+
+    --numFrames: 6;
+    --frameInterval: .30s;
+    --loop: forwards;
+}
+
+#contact.spriteIcon {
+    background-image: url("../assets/sprites/email_spritesheet.png");
+    --frameWidth: 200px;
+    --frameHeight: 200px;
+    --sheetWidth: 2400px;
+
+    --scale: 0.35;
+    --hoverScaleMultiplier: 1.2;
+    
+    --numFrames: 12;
+    --frameInterval: .70s;
+    --loop: infinite;
+}
+
+.spriteIcon {
+    --scaledFrameWidth: calc(var(--frameWidth) * var(--scale));
+    --scaledFrameHeight: calc(var(--frameHeight) * var(--scale));
+    width: var(--scaledFrameWidth);
+    height: var(--scaledFrameHeight);
+
+    background-size:
+        calc(var(--sheetWidth) * var(--scale))
+        calc(var(--frameHeight) * var(--scale));
+
+        
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+
+    --lastFrameX: calc(-1 * var(--scaledFrameWidth) * (var(--numFrames) - 1));
+}
+
+
+.spriteButton:active > .spriteIcon {
+    transform: scale(0.75, 0.75) !important;
+}
+
+.spriteButton:hover > .spriteIcon {
+    transform: scale(var(--hoverScaleMultiplier), var(--hoverScaleMultiplier));
+}
+
+.spriteButton:hover > .spriteIcon.animateOnHover {
+    animation:
+        playSprite
+        var(--frameInterval)
+        steps(calc(var(--numFrames) - 1))
+        var(--loop);
+}
+
+.spriteIcon.alwaysAnimating {
+    animation:
+        playSprite
+        var(--frameInterval)
+        steps(calc(var(--numFrames) - 1))
+        var(--loop);
+}
+
+
+@keyframes playSprite {
+    from {
+        background-position-x: 0;
+    }
+
+    to {
+        background-position-x: var(--lastFrameX);
+    }
+}

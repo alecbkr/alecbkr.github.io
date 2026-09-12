@@ -1,6 +1,7 @@
 const hotbarContainer = document.querySelector(".hotbarContainer");
 const hotbar = document.querySelector(".hotbar");
 
+
 export function initHotbar() {
     
 

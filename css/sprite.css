@@ -2,37 +2,30 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    background-color: yellow;
     gap: .2cm;
 }
 
 .clickable.active {
-    transform: translateY(-20px);
+    /* transform: translateY(-20px); */
 
 
 }
 
 .clickable.active::after {
-    content: "";
+    /* content: "";
     position: absolute;
     inset: 0;
     border-radius: 50%;
-
-    /* background: radial-gradient(
-        circle,
-        rgba(0, 0, 0, 1),
-        transparent 70%
-    ); */
 
     background: rgba(0, 0, 0, 0.1);
 
     transform:
         translateY(45px)
-        /* scaleX(.8) */
         scaleY(.4);
         
         
-    z-index: -1;
+    z-index: -1; */
 
     
 }
@@ -60,10 +53,10 @@
     animation: playSprite var(--frameInterval) steps(var(--numFrames)) var(--loop);
 }
 
-@keyframes playSprite {
+/* @keyframes playSprite {
     from { background-position: 0 0; }
     to { background-position: var(--lastFrameX) 0; }
-}
+} */
 
 
 #spriteAnchor_profile {
@@ -104,8 +97,8 @@
     --baseScale: .50;
     --clickScale: .40;
     --hoverScale: .58;
-    transform: translate(var(--translationX), var(--translationY)) scale(var(--baseScale));
-    
+    /* transform: translate(var(--translationX), var(--translationY)) scale(var(--baseScale)); */
+    transform: scale(var(--baseScale));
     --lastFrameX: -900px;
     --frameInterval: .30s;
     --numFrames: 5;
@@ -114,14 +107,15 @@
 
 #spriteAnchor_chest {
     display: inline-block;
-    width: 90px;
-    height: 70px;
+    /* width: 90px;
+    height: 70px; */
     /* background-color: green; */
 }
 
 
 #emailSprite {
     background-image: url("../assets/sprites/email_spritesheet.png");
+    /*sprite sheet dimensions*/
     width: 200px;
     height: 200px;
     
@@ -130,7 +124,9 @@
     --baseScale: .35;
     --clickScale: .25;
     --hoverScale: .45;
-    transform: translate(var(--translationX), var(--translationY)) scale(var(--baseScale));
+    /* transform: translate(var(--translationX), var(--translationY)) scale(var(--baseScale)); */
+    transform: scale(var(--baseScale));
+    background-color: yellow;
 
     --lastFrameX: -2400px;
     --frameInterval: .70s;
@@ -139,15 +135,15 @@
 }
 
 #spriteAnchor_email {
-    display: inline-block;
-    width: 70px;
-    height: 70px; 
+    /* display: inline-block; */
+    /* width: 70px;
+    height: 70px;  */
     /* /* position: relative; */
     /* background-color: green; */
 }
 
 
-#bat {
+#bat1 {
     background-image: url("../assets/sprites/bat_spritesheet.png");
     width: 170px;
     height: 120px;
@@ -184,7 +180,7 @@
         display: none;
     }
 
-    #spriteAchor_bat {
+    #spriteAnchor_bat {
         display: none;
     }
 }

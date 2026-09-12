@@ -1,6 +1,6 @@
 #titleContainer {
     border: none;
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(var(--backgroundPrimary));
     /* background-color: yellow; */
 
     display: flex;
