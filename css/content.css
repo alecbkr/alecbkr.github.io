@@ -51,13 +51,7 @@
     gap: 10px;
 }
 
-#projects.active {
-    outline: 3px solid red;
-}
 
-#projects.active > * {
-    outline: 3px solid blue;
-}
 
 @media (max-width: 800px) {
     #projects.active {
