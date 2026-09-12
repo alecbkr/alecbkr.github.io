@@ -11,7 +11,6 @@
     -moz-user-select: none;    /* Firefox */
     -ms-user-select: none;     /* Older Edge */
     user-select: none;
-
 }
 
 .hotbar {
@@ -20,11 +19,14 @@
     justify-content: center;
     /* align-items: center; */
 
+    /* width: fit-content; */
+
     gap: 35px;
     bottom: 0;
-    left: 0;
-    right: 0;
+    
     margin-bottom: 40px;
+
+    background-color: purple;
 }
 
 .hotbar.fixed {
