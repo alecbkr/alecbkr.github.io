@@ -30,7 +30,7 @@ p, ul, body {
 
 body {
     min-height: 100vh;
-    width: fit-content;
+    /* width: fit-content; */
     display: flex;
     flex-direction: column;
     flex: 1;
