@@ -1,12 +1,19 @@
 #contentContainer {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     position: relative;
     
     margin: 70px auto 30px auto;
     width: clamp(0px, 90vw, 780px);
-    padding: 10px 10px 10px 10px;
-    /* background-color: yellow; */
+    padding: 10px 10px 10px 10px; */
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 70px auto 30px auto;
+    width: clamp(0px, 90vw, 780px);
+    padding: 10px;
 }
 
 #contentTitle {
@@ -44,6 +51,14 @@
     gap: 10px;
 }
 
+#projects.active {
+    outline: 3px solid red;
+}
+
+#projects.active > * {
+    outline: 3px solid blue;
+}
+
 @media (max-width: 800px) {
     #projects.active {
         flex-direction: column;
@@ -60,16 +75,6 @@
     font-size: 18px;
     font-family: "IBM Plex Sans", sans-serif;
 }
-
-#projectsContent {
-    gap: 10px;
-    justify-content: left;
-    /* align-items: center; */
-    
-}
-
-
-
 
 
 .projectLinkIcon {
