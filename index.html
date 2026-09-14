@@ -103,7 +103,7 @@
                 
                 <section id="skillsContainer" class="container">
 
-                    <p id="sectionTitle"> SKILLS</p>
+                    <span id="sectionTitle"> SKILLS</span>
                     <section id="profileSkills">
 
                         
@@ -136,21 +136,25 @@
                             </li>
                         </ul>
 
-                        <ul class="skillBox skillList">
-                            <p id="skillsTitle">GRAPHICS</p>
-                            <li class="profileSkill"> OPENGL </li>
-                            <li class="profileSkill"> GLSL </li>
-                            <li class="profileSkill"> ASSIMP </li>
-                            <li class="profileSkill"> IMGUI </li>
-                        </ul>
+                        <div class="group">
+                            <ul class="skillBox skillList">
+                                <p id="skillsTitle">GRAPHICS</p>
+                                <li class="profileSkill"> OPENGL </li>
+                                <li class="profileSkill"> GLSL </li>
+                                <li class="profileSkill"> ASSIMP </li>
+                                <li class="profileSkill"> IMGUI </li>
+                            </ul>
 
-                        <ul class="skillBox skillList">
-                            <p id="skillsTitle">TOOLS</p>
-                            <li class="profileSkill"> GIT </li>
-                            <li class="profileSkill"> JIRA </li>
-                            <li class="profileSkill"> CMAKE </li>
-                            <li class="profileSkill"> MAKEFILE </li>
-                        </ul>
+                            <ul class="skillBox skillList">
+                                <p id="skillsTitle">TOOLS</p>
+                                <li class="profileSkill"> GIT </li>
+                                <li class="profileSkill"> JIRA </li>
+                                <li class="profileSkill"> CMAKE </li>
+                                <li class="profileSkill"> MAKEFILE </li>
+                            </ul>
+                        </div>
+
+                        
 
                     </section>
                 </section>
@@ -178,6 +182,12 @@
                             Shuzzy
                         </a>
                     </li>
+                    <li>
+                        <a href="#oldfaithfulsim" id="oldfaithfulsim" class="projectSelectLink container" draggable="false">
+                            <img src="assets/icons/oldfaithfulsim.png" class="projectIcon">
+                            Old Faithful VR Sim
+                        </a>
+                    </li>
                 </ul>
 
                     
@@ -185,9 +195,9 @@
                     <div class="projectHeader">
                         <img src="assets/icons/prism.png" class="projectIcon">
                         <h3>PRISM - SHADER SANDBOX</h3>
-                        <a href="https://github.com/alecbkr/shader-sandbox" class="projectLink">
+                        <!-- <a href="https://github.com/alecbkr/shader-sandbox" class="projectLink">
                             <div class="projectLinkIcon"></div>
-                        </a>
+                        </a> -->
                     </div>
 
                     <section class="projectAbout">
@@ -219,9 +229,9 @@
                     <div class="projectHeader">
                         <img src="assets/icons/simpletonchess.png" class="projectIcon">
                         <h3>SIMPLETON CHESS</h3>
-                        <a href="https://github.com/alecbkr/shader-sandbox" class="projectLink">
+                        <!-- <a href="https://github.com/alecbkr/shader-sandbox" id="github" class="projectLink">
                             <div class="projectLinkIcon"></div>
-                        </a>
+                        </a> -->
                     </div>
 
                     <section class="projectAbout">
@@ -250,9 +260,9 @@
                     <div class="projectHeader">
                         <img src="assets/icons/shuzzy.png" class="projectIcon">
                         <h3>SHUZZY</h3>
-                        <a href="https://github.com/alecbkr/shader-sandbox" class="projectLink">
+                        <!-- <a href="https://github.com/alecbkr/shader-sandbox" id="github" class="projectLink">
                             <div class="projectLinkIcon"></div>
-                        </a>
+                        </a> -->
                     </div>
 
                     <section class="projectAbout">
@@ -271,6 +281,34 @@
                             about reported catches in local bodies of water. Users can log and 
                             track their catches over time while exploring the achievements and experiences of other 
                             local anglers.
+                        </p>
+                        
+                    </section>
+                </article>
+
+                <article id="oldfaithfulsim" class="projectPageContent">
+                    <div class="projectHeader">
+                        <img src="assets/icons/oldfaithfulsim.png" id="oldfaithfulsim" class="projectIcon">
+                        <h3>OLD FAITHFUL VR SIM</h3>
+                    </div>
+
+                    <section class="projectAbout">
+                        <div class="imageShowcase">
+                            <div class="imageViewport container">
+                                <img src="assets/project images/oldfaithfulsim/oldfaithfulsim1.png" class="showcaseImage">
+                                <img src="assets/project images/oldfaithfulsim/oldfaithfulsim2.png" class="showcaseImage">
+                            </div>
+                            <div class="imageSelector"></div>
+                        </div>
+                        <p>
+                            An educational virtual reality experience showcasing the Old Faithful geyser in Yellowstone
+                            National Park, built in Unreal Engine. <br> <br>
+                            
+                            Students are immersed in a virtual Yellowstone while a friendly tour guide narrates the park's
+                            history and facts about the Old Faithful geyser as they experience it errupt.
+
+                            <!-- using topographical mapping provided by Google Maps -->
+                            
                         </p>
                         
                     </section>

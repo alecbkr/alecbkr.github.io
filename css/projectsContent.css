@@ -105,6 +105,44 @@
     font-size: 18px;
 }
 
+.projectLink {
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+    background-color: var(--coreColorPrimary);
+    border-radius: 50%;
+    /* border: 1.5px solid blueviolet; */
+    /* background-color: white; */
+    /* padding: 1px; */
+}
+
+
+
+.projectLinkIcon {
+    /* background-color: var(--backgroundColor); */
+    --iconSize: 35px;
+    width: var(--iconSize);
+    height: var(--iconSize);
+    background-color: var(--coreColorQuaternary);
+    transform: translateY(-.5px);
+    /* left: 100%; */
+    /* margin-left: auto; */
+    /* background-color: ; */
+    
+
+    transition: background-color 0.2s ease;
+
+    /* -webkit-mask: url("../assets/icons/link.png") center / contain no-repeat; */
+    mask: url("../assets/icons/github.png") center / contain no-repeat;
+}
+
+.projectLinkIcon:hover {
+    background-color: var(--lightPrimary);
+}
+
+
+/* IMAGE SHOWCASE */
+
 .imageShowcase {
     float: left;
     display: flex;
@@ -123,7 +161,6 @@
 }
 
 
-
 .imageViewport {
     width: 350px;
     height: 200px;
@@ -138,8 +175,96 @@
     }
 }
 
+.showcaseImage {
+    display: none;
+    /* width: 100%; */
+}
+
+.showcaseImage.active {
+    display: block;
+}
+
 .imageSelector {
     display: flex;
     justify-content: center;
     height: 5px;
+    padding: 5px;
+     gap: 5px;
+}
+
+.imageViewport img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    cursor: zoom-in;
+}
+
+
+
+.imageSelectorNode {
+    /* size: 25px; */
+    background-color: var(--coreColorQuaternary);
+    width: 20px;
+    height: 10px;
+
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.imageSelectorNode:hover {
+    background-color: var(--accentColorSecondary);
+}
+
+.imageSelectorNode.active {
+    background-color: var(--accentColorPrimary);
+}
+
+.imageInspector {
+    display: none;
+}
+
+.imageInspector.active {
+    position: fixed;
+    top: 0; left: 0;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+
+    background: rgba(0, 0, 0, 0.7); 
+    /* background-color: yellow; */
+    
+    width: 100%; height: 100%;
+
+    z-index: 99;
+}
+
+.imageInspector img {
+    position: fixed;
+    
+
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    
+    max-width: 90vw;
+    max-height: 90vh;
+    /* width: clamp(0px, 90%, 900px); 
+    height: clamp(0px, 90%, 900px);  */
+
+    width: auto;
+    height: auto;
+
+    /* width: 100%; height: 100%; */
+    object-fit: contain;
+}
+
+.closeBox {
+    position: fixed;
+    width: 100%; height: 100vh;
+    cursor: zoom-out;
+    /* background-color: white; */
+    z-index: 100;
+
+    user-select: none;
+    -webkit-user-select: none;
 }

@@ -135,6 +135,12 @@ input:focus, textarea:focus {
     border-bottom-color: var(--selectedBorderAmbient);
 }
 
+#github {
+    /* background-color: blueviolet; */
+    --lightBorder: rgb(170, 121, 216);
+    --ambientBorder: rgb(71, 24, 114);
+}   
+
 
 
 .speechbox {

@@ -7,6 +7,7 @@
 #profileDescription {
     font-size: 18px;
     font-family: "IBM Plex Sans", sans-serif;
+    /* margin-bottom: 20px; */
 }
 
 
@@ -37,6 +38,7 @@
     font-weight: 500;
     gap: 20px;
     padding: 5px 5px 5px 5px;
+    margin-bottom: 30px;
 }
 
 #profilePic {
@@ -62,6 +64,14 @@
     }
 }
 
+.group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 60px;
+    /* background-color: yellow; */
+    
+}
+
 #skillsContainer {
     /* padding: 30px 0px 30px 0px; */
     background-color: var(--lightSecondary);
@@ -77,14 +87,17 @@
 }
 
 #profileSkills {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr);  */
+    display: flex;
     justify-items: center;
+    gap: 50px;
     /* align-items: center; */
     /* background-color: yellow; */
     padding-bottom: 20px;
     padding-left: 10px;
     padding-right: 10px;
+    margin-top: 20px;
 }
 
 @media (max-width: 450px) {
