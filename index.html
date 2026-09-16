@@ -89,7 +89,7 @@
                         I am most proficient in <span class="highlight">C and C++</span> and enjoy working in them because 
                         of their explicit nature and access over system resources.
                         My interest in low-level programming has given me a strong understanding 
-                        of foundational computer science concepts that support the way I design and develop software.
+                        of foundational computer science concepts that influence the way I design and develop software.
                     </p> <br>
                     
                     <p>
@@ -201,6 +201,7 @@
                     </div>
 
                     <section class="projectAbout">
+                        <span class="sectionTitle">OVERVIEW</span>
                         <div class="imageShowcase">
                             <div class="imageViewport container">
                                 <img src="assets/project images/prism/prism-demo1.gif" class="showcaseImage">
@@ -222,6 +223,47 @@
                         </p>
                         
                     </section>
+
+                    <section class="projectSection">
+                        <span class="sectionTitle">MY ROLE</span>
+                        <p>
+                            I was Prism's 3D rendering system architect, which entailed designing a flexible rendering pipeline that would
+                            draw a wide variety of 3D model types to the viewport. Because Prism is meant to expose GPU control to the user,
+                            I had to consider many different use-cases in my design. Things like checking model/shader states, 
+                            establishing rendering rules and ordering, and providing forward facing support to allow changes to model properties 
+                            on the fly.
+                        </p> <br>
+
+                        <p>
+                            Rendering 3D models happens in a series of steps, so my renderer relies on organized retrieval of specifc model 
+                            resources at a given time.
+                            I designed an object oriented hierarchy of data structures to split 3D models into multiple subcomponents to store 
+                            GPU resources separately based on type (models, meshes, materials, textures). I built resource management 
+                            systems for each type to handle storage, retreival, and act as an interface for accessing the resource's GPU 
+                            functionalities. 
+                        </p> <br>
+
+                        <p>
+                            Additionally, I introduced foundational framework systems that helped this project evolve from a program 
+                            into an application. I created a logger to record and print runtime errors or information, a dedicated app timer,
+                            and an initial input management class for relaying keyboard/mouse inputs to the rest of the application.  
+                        </p>
+                    </section>
+
+                    <section class="projectSection">
+                        <span class="sectionTitle">REFLECTION</span>
+                        <p>
+                            This was my graduating senior project and by far the most ambitious project I've ever worked on (and maybe
+                            a bit more than any of the team bargained for).
+                            It was an experience full of mistakes, long nights, frustrations, redesigns, etc, etc. But most importantly, it made me
+                            learn more and grow in ways that no amount of rubricked programming assignments ever could. 
+                        </p> <br>
+
+                        <p>
+                            Huge thanks to the rest of the Prism team and our team lead Carsdan Dvorachek for this amazing opportunity.
+                            
+                        </p>
+                    </section>
                 </article>
 
 
@@ -235,6 +277,7 @@
                     </div>
 
                     <section class="projectAbout">
+                        <span class="sectionTitle">OVERVIEW</span>
                         <div class="imageShowcase">
                             <div class="imageViewport container">
                                 <img src="assets/project images/chess/chess-demo2.png" class="showcaseImage">
@@ -266,6 +309,7 @@
                     </div>
 
                     <section class="projectAbout">
+                        <span class="sectionTitle">OVERVIEW</span>
                         <div class="imageShowcase">
                             <div class="imageViewport container">
                                 <img src="assets/project images/shuzzy/shuzzy-demo2.png" class="showcaseImage">
@@ -293,6 +337,7 @@
                     </div>
 
                     <section class="projectAbout">
+                        <span class="sectionTitle">OVERVIEW</span>
                         <div class="imageShowcase">
                             <div class="imageViewport container">
                                 <img src="assets/project images/oldfaithfulsim/oldfaithfulsim1.png" class="showcaseImage">
@@ -302,7 +347,7 @@
                         </div>
                         <p>
                             An educational virtual reality experience showcasing the Old Faithful geyser in Yellowstone
-                            National Park, built in Unreal Engine. <br> <br>
+                            National Park, built in Unreal Engine. Placed fifth at Modeling & Simulation Student Day 2019<br> <br>
                             
                             Students are immersed in a virtual Yellowstone while a friendly tour guide narrates the park's
                             history and facts about the Old Faithful geyser as they experience it errupt.
@@ -311,6 +356,11 @@
                             
                         </p>
                         
+                    </section>
+
+                    <section class="projectSection">
+                        <span class="sectionTitle">MY ROLE</span>
+                        <p>As team lead and lead programmer, I delegated tasks to team members based on their strengths </p>
                     </section>
                 </article>
 
