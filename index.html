@@ -63,7 +63,7 @@
                 <span id="contentPrefix">ALECBKR\</span><span id="contentSection">PROFILE</span>
             </h2>
 
-            <article id="profile" class="content" data-title="PROFILE" data-width="clamp(0px, 90vw, 780px)">
+            <article id="profile" class="content active" data-title="PROFILE" data-width="clamp(0px, 90vw, 780px)">
 
                 <section id="profileText">
                     <img id="profilePic" class="container" src="assets/pfp.jpg" alt="profilepicture">
@@ -227,26 +227,24 @@
                     <section class="projectSection">
                         <span class="sectionTitle">MY ROLE</span>
                         <p>
-                            I was Prism's 3D rendering system architect, which entailed designing a flexible rendering pipeline that would
-                            draw a wide variety of 3D model types to the viewport. Because Prism is meant to expose GPU control to the user,
-                            I had to consider many different use-cases in my design. Things like checking model/shader states, 
-                            establishing rendering rules and ordering, and providing forward facing support to allow changes to model properties 
-                            on the fly.
+                            I was Prism's 3D rendering system architect, which entailed designing a flexible rendering pipeline capable of 
+                            drawing a wide variety of 3D model types to the viewport. Because Prism is meant to expose GPU control to the 
+                            user, I had to consider several use cases in my design, including checking model and shader states, 
+                            establishing rendering rules and ordering, and providing forward-facing support for changing model properties on the fly.
                         </p> <br>
 
                         <p>
-                            Rendering 3D models happens in a series of steps, so my renderer relies on organized retrieval of specifc model 
-                            resources at a given time.
-                            I designed an object oriented hierarchy of data structures to split 3D models into multiple subcomponents to store 
-                            GPU resources separately based on type (models, meshes, materials, textures). I built resource management 
-                            systems for each type to handle storage, retreival, and act as an interface for accessing the resource's GPU 
-                            functionalities. 
+                            Rendering 3D models requires a series of organized steps, so my renderer relies on retrieving specific 
+                            model resources at the appropriate time. I designed an object-oriented hierarchy of data structures that 
+                            decomposes 3D models into subcomponents, storing GPU resources separately by type (models, meshes, materials, 
+                            and textures). I built resource management systems for each type to handle storage, retrieval, and provide 
+                            an interface for accessing GPU functionality.
                         </p> <br>
 
                         <p>
-                            Additionally, I introduced foundational framework systems that helped this project evolve from a program 
-                            into an application. I created a logger to record and print runtime errors or information, a dedicated app timer,
-                            and an initial input management class for relaying keyboard/mouse inputs to the rest of the application.  
+                            Additionally, I introduced foundational framework tools that helped evolve Prism from a program into an application. 
+                            I created a logger to record and print runtime errors and information, a dedicated application timer, and an 
+                            initial input management class to relay keyboard and mouse inputs throughout the application.  
                         </p>
                     </section>
 
@@ -255,12 +253,12 @@
                         <p>
                             This was my graduating senior project and by far the most ambitious project I've ever worked on (and maybe
                             a bit more than any of the team bargained for).
-                            It was an experience full of mistakes, long nights, frustrations, redesigns, etc, etc. But most importantly, it made me
-                            learn more and grow in ways that no amount of rubricked programming assignments ever could. 
+                            It was an experience full of long nights, debugging, refactors, redesigns, etc, etc. But more importantly, it made me
+                            learn more and grow in ways that no amount of rubricked programming assignments could ever. 
                         </p> <br>
 
                         <p>
-                            Huge thanks to the rest of the Prism team and our team lead Carsdan Dvorachek for this amazing opportunity.
+                            Huge thanks to the rest of the Prism team and our project manager Carsdan Dvorachek for this amazing opportunity.
                             
                         </p>
                     </section>
@@ -290,11 +288,34 @@
                             A lightweight console chess game that demonstrates efficient 
                             game-state management and move validation in a text-based environment. <br><br>
 
-                            Simpleton Chess draws a custom ASCII board, enforces the rules of chess through legal 
+                            Simpleton Chess draws an ASCII game board, enforces the rules of chess through legal 
                             move checking, and improves player interaction with visual indicators that highlight 
                             every valid move available to the selected piece.
                         </p>
-                        
+                    </section>
+
+                    <section class="projectSection">
+                        <span class="sectionTitle">MY ROLE</span>
+                        <p>
+                            Simpleton Chess was a personal project aimed at exercising my ability to independently engineer a game I know well.
+                            The focus was on translating the rules of Chess into data structures, states, and algorithms that work in tandem
+                            to mirror the real deal.
+                        </p> <br>
+
+                        <p>
+                            I engineered a modular gameplay loop that separates application and game responsibilities, allowing 
+                            additional games to be integrated without modifying core application logic.
+                        </p> <br>
+
+                        <p>
+                            I designed a modular game board using a multidirectional linked-list structure, enabling O(n) traversal across tiles. Each tile maintains 
+                            pointers to neighboring tiles and an occupant reference for the piece residing on it.
+                        </p> <br>
+
+                        <p>
+                            I developed algorithms to calculate and record all legal moves available to selected pieces, enforcing game rules 
+                            and simplifying game-state validation.
+                        </p>
                     </section>
                 </article>
                 
@@ -328,6 +349,19 @@
                         </p>
                         
                     </section>
+
+                    <section class="projectSection">
+                        <span class="sectionTitle">MY ROLE</span>
+                        <p>
+                            Integrated and managed MongoDB for the web application's backend, designing database collections 
+                            to store user accounts, posts, and records.
+                        </p> <br>
+
+                        <p>
+                            Developed JavaScript API endpoints for responsive communication between the web application and server, 
+                            enabling efficient data transmission and retrieval.
+                        </p>
+                    </section>
                 </article>
 
                 <article id="oldfaithfulsim" class="projectPageContent">
@@ -351,16 +385,26 @@
                             
                             Students are immersed in a virtual Yellowstone while a friendly tour guide narrates the park's
                             history and facts about the Old Faithful geyser as they experience it errupt.
-
-                            <!-- using topographical mapping provided by Google Maps -->
-                            
                         </p>
                         
                     </section>
 
                     <section class="projectSection">
                         <span class="sectionTitle">MY ROLE</span>
-                        <p>As team lead and lead programmer, I delegated tasks to team members based on their strengths </p>
+                        <p>
+                            I served as project manager and lead programmer, integrating team contributions and assembling the environment 
+                            for the final product using Unreal Engine.
+                        </p> <br>
+
+                        <p>
+                            I delegated tasks based on team members' strengths and willingness to learn new technologies, coordinating 
+                            development across the project.
+                        </p> <br>
+
+                        <p>
+                            I used Unreal Engine's Blueprint system to coordinate environmental changes and event queues, creating a 
+                            guided learning sequence for the student.
+                        </p>
                     </section>
                 </article>
 

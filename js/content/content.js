@@ -6,7 +6,7 @@ const allContent = document.querySelectorAll(".content");
 const contentTitle = document.querySelector("#contentSection");
 const contentContainer = document.querySelector("#contentContainer");
 
-export function openContent(contentId) {
+export function openContent(contentId, effect) {
 
     const selectedContent = document.querySelector(contentId + ".content");
 
@@ -20,6 +20,19 @@ export function openContent(contentId) {
         contentContainer.style.width = selectedContent.dataset.width;
         contentTitle.textContent = selectedContent.dataset.title;
         history.pushState(null, "", `${contentId}`);
+
+        if (effect) {
+            const contentContainer = document.querySelector("#contentContainer");
+            const contentTitle = document.querySelector("#contentTitle");
+            if (contentContainer.classList.contains("flash")) {
+                contentContainer.classList.remove("flash");
+                contentTitle.classList.remove("flash");
+                void contentContainer.offsetWidth;
+                void contentTitle.offsetWidth;
+            }
+            contentContainer.classList.add("flash");
+            contentTitle.classList.add("flash");
+        }
     }
 }
 
@@ -31,17 +44,14 @@ export function landOnContent() {
     switch (contentString) {
         case "projects":
             openContent("#projects");
-            // document.querySelector("#spriteAnchor_chest").classList.add("active");
             break;
         
         case "contact":
             openContent("#contact");
-            // document.querySelector("#spriteAnchor_email").classList.add("active");
             break;
         
         default:
             openContent("#profile");
-            // document.querySelector("#spriteAnchor_profile").classList.add("active");
     }
 }
 

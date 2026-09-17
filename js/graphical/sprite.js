@@ -10,7 +10,7 @@ export function initSprites() {
         button.addEventListener("click", (event) => {
             event.preventDefault();
             if (button.getAttribute("data-action") == "openPage") {
-                openContent(button.getAttribute("href"));
+                openContent(button.getAttribute("href"), 1);
             }
             else if (button.getAttribute("data-action") == "speak") {
                 const speechbox = document.querySelector('#' + button.id + ".speechbox");
